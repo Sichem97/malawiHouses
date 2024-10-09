@@ -4,50 +4,52 @@ import './css/Header.css'
 function Header() {
   return (
     <>
-      {/* nav */}
-      <nav className="navbar">
-        <div className="nav-center">
-          <div className="nav-header">
-              <a href="#"><img src={"./assets/logo.png"} alt="logo_page" /></a>
-          </div>
+    <header className="header">
+      	 {/* Header Inner  */}
+			<div class="header-inner">
+				<div class="container">
+					<div class="inner">
+						<div class="row">
+							<div class="col-lg-3 col-md-3 col-12">
+								 {/* Start Logo  */}
+								<div class="logo">
+									<a href="index.html"><img src="assets/logo.png" alt="#"/></a>
+								</div>
+								 {/* End Logo  */}
+							</div>
+							<div class="col-lg-7 col-md-9 col-12">
+								 {/* Main Menu  */}
+								<div class="main-menu">
+									<nav class="navigation">
+										<ul class="nav menu">
 
-          <div className="nav-links">
-            <div className="nav-links_ul">
+											<li><a href="#">Home </a></li>
 
-            <div className='nav-links_ul_grid'>
-              <ul>
-                <li><a href="#">Home</a></li>
-              </ul>
-            </div>
-              
-            <div className='nav-links_ul_grid'>
-              <ul>
-                <li> <a href="#">Services</a>
-                  <ul className="services_ul">
-                    <li><a href="#">Renting</a></li>
-                    <li><a href="#">Buying</a></li>
-                    <li><a href="#">Selling</a></li>
-                </ul></li>
-              </ul>
-            </div>
-              
-            <div className='nav-links_ul_grid'>
-              <ul>
-                <li><a href="#">About-Us</a></li>
-              </ul>
-            </div>
+											<li class="active"><a href="#">Services <i class="icofont-rounded-down"></i></a>
+												<ul class="dropdown">
+													<li><a href="index.html">Renting</a></li>
+                          <li><a href="index.html">Buying</a></li>
+                          <li><a href="index.html">Selling</a></li>
+												</ul>
+											</li>
 
-            <div className=''>
-              <ul className="contact_link">
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-              
-            </div>
-          </div>
-        </div>
-      </nav>
-      {/* end of nav */}
+                      <li><a href="#">Blog</a></li>
+											
+                      <li><a href="#">About</a></li>
+											
+						
+											<li><a href="#">Contact Us</a></li>
+										</ul>
+									</nav>
+								</div>
+								{/* / End Main Menu  */}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{/* / End Header Inner  */}
+    </header>
     </>
   );
 }

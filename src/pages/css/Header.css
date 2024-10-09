@@ -67,95 +67,153 @@ a{
 ul{
     list-style-type: none;
 }
-/*NavBar*/
-.navbar{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    background-color: var(--gree-light);
+/*===================
+	Start Header CSS 
+=====================*/
+.header{
+	background-color:#fff;
+	position:relative;
+}
+.header-inner {
+	background:#fff;
+	z-index:999;
+	width:100%;
+}
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header .logo {
+	float: left;
+	margin-top: 18px;
 }
 
-.nav-center{
-    width: 90vw;
-    max-width: var(--max-width);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 1.2rem;
-    /* background-color: var(--grey-900); */
+.logo a img{
+  width: 180px;
+  height: 80px;
 }
-.nav-header img{
-    width: 150px;
-    height: 80px;
-    /* padding: 0 10px 0 0; */
-}
-.nav-center a{
-    color: var(--grey-900);
-    font-size: 18px;
-}
-.nav-links_ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .nav-links_ul_grid a{
-    padding: 5px;
-  }
 
-  .nav-links_ul_grid a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    display: block;
-    margin-top: 5px;
-    left: 50%;
-    background: var(--black);
-    transition: width 0.8s ease, left 0.8s ease;
-    -webkit-transition: width 0.4s ease, left 0.4s ease;
+.header .navbar {
+	background: none;
+	box-shadow: none;
+	border: none;
+	margin: 0;
+	height: 0px;
+	min-height: 0px;
 }
-.nav-links_ul_grid a:hover::after {
-    width: 100%;
-    left: 0;
-    background: var(--red-dark);
+.header .nav li{
+	margin-right: 15px;
+    float: left;
+	position:relative;
 }
-  
-  .nav-links li {
-    position: relative;
-  }
-  
-  .services_ul {
-    display: none;
-    position: absolute;
-    text-align: center;
-    background-color:transparent;
-    border-radius: var(--borderRadius);
-  }
-  
-  .nav-links li:hover > .services_ul {
-    display: grid;
-  }
+.header .nav li:last-child{
+	margin:0;
+}
+.header .nav li a {
+	color: #2C2D3F;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: capitalize;
+	padding: 25px 12px;
+	position: relative;
+	display: inline-block;
+	position:relative;
+}
+.header .nav li a::before {
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width:0%;
+	background: #1A76D1;
+	border-radius: 5px 5px 0 0;
+	opacity:0;
+	visibility:hidden;
+	-webkit-transition:all 0.4s ease;
+	-moz-transition:all 0.4s ease;
+	transition:all 0.4s ease;
+}
+.header .nav li.active a:before{
+	opacity:1;
+	visibility:visible;
+	width: 100%;
+}
+.header .nav li.active a{
+	color:#1A76D1;
+}
+.header .nav li:hover a:before{
+	opacity:1;
+	width: 100%;
+	visibility:visible;
+}
+.header .nav li:hover a{
+	color:#1a76d1;
+}
+.header .nav li a i {
+	display: inline-block;
+	margin-left: 1px;
+	font-size: 13px;
+}
 
-  .services_ul a:hover{
-    color: var(--white);
-    background-color: var(--black);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-    padding: 5px;
-    border-radius: var(--borderRadius);
-  }
-  
-.contact_link a{
- background-color: #0f5132;
- padding: 10px;
- border-radius: var(--borderRadius);
- color: var(--white);
+/* Dropdown Menu */
+.header .nav li .dropdown {
+	background: #fff;
+	width: 220px;
+	position: absolute;
+	left:-20px;
+	top: 100%;
+	z-index: 999;
+	-webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 3px 5px #3333334d;
+	transform-origin: 0 0 0;
+	transform: scaleY(0.2);
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	opacity: 0;
+	visibility: hidden;
+	top: 74px;
+	border-left:3px solid #2889e4;
 }
-.contact_link a:hover{
-  background-color: transparent;
-  color: var(--black);
-  background-color: var(--gree-light);
-  transition: 0.5s
+.header .nav li:hover .dropdown{
+	opacity:1;
+	visibility:visible;
+	transform:translateY(0px);
 }
+.header .nav li .dropdown li{
+	float:none;
+	margin:0;
+	border-bottom:1px dashed #eee;
+}
+.header .nav li .dropdown li:last-child{
+	border:none;
+}
+.header .nav li .dropdown li a {
+	padding: 12px 15px;
+	color: #666;
+	display: block;
+	font-weight: 400;
+	text-transform: capitalize;
+	background: transparent;
+	-webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+	transition:all 0.2s ease;
+}
+.header .nav li .dropdown li a:before{
+	display:none;
+}
+.header .nav li .dropdown li:last-child a{
+	border-bottom:0px;
+}
+.header .nav li .dropdown li:hover a{
+	color:#1A76D1;
+}
+.header .nav li .dropdown li a:hover{
+	border-color:transparent;
+}
+/*=========================
+	End Header CSS
+===========================*/
