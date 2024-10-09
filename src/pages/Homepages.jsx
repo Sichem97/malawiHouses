@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import './css/Homepage.css';
+import HomeM from './HomeM'
 
 function Homepages() {
  
@@ -11,10 +12,10 @@ function Homepages() {
         <Header/>
 
         <>
-        
+        <HomeM/>
         </>
 
-        <Footer/>
+        {/* <Footer/> */}
         
     </div>
   )
