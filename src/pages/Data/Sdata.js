@@ -8,7 +8,7 @@ const Sdata = [
     cover: "./assets/Home_pub/House.png",
   },
   {
-    id: 2,
+    id: 3,
     cover: "./assets/Home_pub/House.png",
   },
 ]

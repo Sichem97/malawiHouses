@@ -1,8 +1,9 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import './css/Header.css'
 
 function Header() {
-  return (
+  return ( 
     <>
     <header className="header">
       	 {/* Header Inner  */}
@@ -10,44 +11,51 @@ function Header() {
 				<div class="container">
 					<div class="inner">
 						<div class="row">
-							<div class="col-lg-3 col-md-3 col-12">
+
 								 {/* Start Logo  */}
 								<div class="logo">
-									<a href="index.html"><img src="assets/logo.png" alt="#"/></a>
+									<Link to='/'>
+									<img src="assets/Logo/logo2.png" alt="logo_page"/>
+									</Link>
 								</div>
 								 {/* End Logo  */}
-							</div>
-							<div class="col-lg-7 col-md-9 col-12">
+
 								 {/* Main Menu  */}
 								<div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
 
-											<li><a href="#">Home </a></li>
+										<li><Link to='/'>Home</Link> </li>
 
-											<li class="active"><a href="#">Services <i class="icofont-rounded-down"></i></a>
+										<li class="active"><Link>Services <i class="icofont-rounded-down"></i></Link>
 												<ul class="dropdown">
-													<li><a href="index.html">Renting</a></li>
-                          <li><a href="index.html">Buying</a></li>
-                          <li><a href="index.html">Selling</a></li>
+													<li><Link to='/RentPage'>For Rent</Link></li>
+													<li><Link to='/BuyPages'>For Sell</Link></li>
+													<li><Link to='/SellPage'>Publish here</Link></li>
 												</ul>
-											</li>
+										</li>
 
-                      <li><a href="#">Blog</a></li>
-											
-                      <li><a href="#">About</a></li>
-											
-						
-											<li><a href="#">Contact Us</a></li>
+										<li>
+											<Link to='/Blog'>Blog</Link>
+										</li>
+																
+										<li>
+											<Link to='/AboutUs'>About</Link>
+										</li>
+										
+					
+										<li>
+											<Link to='/ContactUs'>Contact Us</Link>
+										</li>
 										</ul>
 									</nav>
 								</div>
 								{/* / End Main Menu  */}
+
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 			{/* / End Header Inner  */}
     </header>
     </>

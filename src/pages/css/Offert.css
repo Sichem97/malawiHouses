@@ -1,0 +1,300 @@
+:root{
+  /*colors*/
+  --primary-100 : #e2e0ff;
+  --primary-200 : #c1beff;
+  --primary-300 : #a29dff;
+  --primary-400 : #837dff;
+  --primary-500 : #645cff;
+  --primary-600 : #504acc;
+  --primary-700 : #3c3799;
+  --primary-800 : #282566;
+  --primary-900 : #141233;
+
+/* gold */
+--gold-50:  #fff4cc;
+--gold-100: #ffe699;
+--gold-200: #ffd966;
+--gold-300: #ffcc33;
+--gold-400: #ffbf00;
+--gold-500: #ffae00;
+--gold-600: #e69c00;
+--gold-700: #cc8a00;
+--gold-800: #b37800;
+--gold-900: #996600;
+
+  /*grey*/
+  --grey-50: #f8fafc;
+  --grey-100: #f1f5f9;
+  --grey-200: #e2e8f0;
+  --grey-300: #cbd5e1;
+  --grey-400: #94a3b8;
+  --grey-500: #64748b;
+  --grey-600: #475569;
+  --grey-700: #334155;
+  --grey-800: #1e293b;
+  --grey-900: #0f172a;
+  
+  /*rest of the colors*/
+  --black: #222;
+  --white:#fff;
+  --red-light : #f8d7da;
+  --red-light : #f7192c;
+  --red-dark : #842029;
+  --gree-light: #d1e7dd;
+  --green-mid:#03a359;
+  --green-dark:#0f5132;
+
+  /*fonts*/
+  --headingFont: 'Roboto', sans-serif;
+  --bodyFont: 'Nunito', sans-serif;
+  --smallText:0.7em;
+  /*rest of the vars*/
+  --backgroundColor:var(--grey-50);
+  --backgroundNavColor:var(--grey-900);
+  --textColor:var(--grey-900);
+  --borderRadius:0.25rem;
+  --letter-spacing: 1px;
+  --transition:0.3s ease-in-out all;
+  --max-width:1120px;
+  --fixed-width :600px;
+
+  /*box shadow*/
+  --shadow-1: 0 1px 3px  0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.6);
+  --shadow-2: 0 4px 6px  -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.6);
+  --shadow-3: 0 10px 15px  -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.5);
+  --shadow-4: 0 20px 25px  -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.4);
+}
+/*=============================
+	Start Feautes CSS
+===============================*/
+.Feautes{
+	padding: 1% 0;
+  text-align: center;
+}
+.Feautes p{
+    color: var(--black);
+
+}
+
+.section-title h2{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-size: 2rem;
+    color: var(--grey-800);
+    text-transform: uppercase;
+}
+.section-title img{
+  margin-top: 0;
+  width: 250px;
+  height: 100px;
+}
+.Feautes.index2{
+	padding-top:100px;
+}
+.Feautes.testimonial-page{
+	padding-top:100px;
+}
+.Feautes .single-features{
+	text-align:center;
+	position:relative;
+	padding:10px 20px;
+}
+.Feautes .single-features::before {
+	position: absolute;
+	content: "";
+	right: -72px;
+	top: 60px;
+	width: 118px;
+	border-bottom: 2px dotted var(--gold-700);
+}
+.Feautes .single-features img:hover{
+  -webkit-transform:scale(1.2);
+	-moz-transform:scale(1.2);
+	transform:scale(1.1);
+  transition: 0.3s;
+}
+.Feautes .single-features.last::before{
+	display:none;
+}
+.Feautes .single-features .signle-icon{
+	position:relative;
+}
+.Feautes .single-features .signle-icon img{
+  padding: 10px;
+	font-size:50px;
+	position:absolute;
+	left:50%;
+	margin-left:-50px;
+	top:0;
+	height:100px;
+	width:100px;
+	line-height:100px;
+	text-align:center;
+	border-radius:25%;
+	-webkit-transition:all 0.4s ease;
+	-moz-transition:all 0.4s ease;
+	transition:all 0.4s ease;
+}
+.Feautes .single-features:hover .signle-icon img{
+	background:var(--gold-100);
+	color:#fff;
+	border-color:transparent;
+  box-shadow: var(--shadow-4);
+}
+.Feautes .single-features h3{
+	padding-top: 128px;
+	color:var(--grey-900);
+	font-weight:600;
+	font-size:21px;
+  text-transform: uppercase;
+}
+.Feautes .single-features p {
+	margin-top: 20px;
+}
+/*=============================
+	End Feautes CSS
+===============================*/
+
+
+/*=============================
+	professional section
+===============================*/
+.professional_section {
+  background-color: var(--grey-300);
+  border-radius: var(--borderRadius);
+}
+.professional_section .container .row2{
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+}
+
+.professional_section .row2 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+  align-items: center;
+}
+
+.professional_section .img-box img {
+  width: 100%;
+}
+
+.professional_section .detail-box h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--grey-900);
+}
+
+.professional_section .detail-box p {
+  margin-top: 20px;
+  color: var(--grey-900);
+}
+
+.professional_section .detail-box a {
+  margin-top: 5px;
+  display: inline-block;
+  font-family:cursive;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 10px 45px;
+  border-radius: 2px;
+  color: var(--grey-900);
+  text-decoration:double;
+  letter-spacing: 3px;
+}
+.professional_section .detail-box span{
+  color: var(--green-mid);
+}
+
+.professional_section .detail-box a {
+  background: linear-gradient(to right, var(--grey-900) 50%, var(--black) 50px);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: var(--white);
+  border-radius: var(--borderRadius);
+  transition: all 0.3s ease;
+  width: 230px;
+}
+
+.professional_section .detail-box a:hover {
+  background-position: left bottom;
+  color: var(--green-mid);
+}
+
+
+.professional_section .detail-box ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: var(--grey-900);
+  list-style-type:none;
+  justify-content: space-between;
+}
+
+
+/*=============================
+	end of professional section
+===============================*/
+
+/*=========================
+	Start service CSS
+===========================*/
+.services{
+  padding: 2%;
+  color: var(--grey-900);
+}
+.services .single-service{
+  width:250px;
+  height:250px;
+	margin:15px 7px;
+	position:relative;
+	padding:20px;
+  background: var(--grey-500);
+  border-radius: 25px;
+  overflow: hidden;
+}
+.services .single-service:hover{
+    background: -moz-linear-gradient(left, var(--green-mid) 0%, var(--green-dark) 100%);
+    background: -webkit-linear-gradient(left, var(--green-mid) 0%, var(--green-dark) 100%);
+    background: linear-gradient(to right, var(--green-mid) 0%, var(--green-dark) 100%);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(1.1);
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.row3 .section-title{
+  text-align: center;
+}
+.services .row-col{
+  padding: 0 12%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.services .row-col .single-service img{
+	font-size:45px;
+	position:absolute;
+	left:0;
+	-webkit-transition:all 0.4s ease;
+	-moz-transition:all 0.4s ease;
+	transition:all 0.4s ease;
+}
+.services .row-col .single-service h4{
+	text-transform:capitalize;
+	margin-bottom:25px;
+  text-align: center;
+  color: var(--grey-900);
+}
+.services .row-col .single-service p{
+text-align: center;
+color: var(--grey-900);
+}
+
+
+/*=========================
+	End service CSS
+===========================*/

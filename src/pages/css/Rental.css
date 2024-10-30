@@ -1,0 +1,195 @@
+:root{
+    /*colors*/
+    --primary-100 : #e2e0ff;
+    --primary-200 : #c1beff;
+    --primary-300 : #a29dff;
+    --primary-400 : #837dff;
+    --primary-500 : #645cff;
+    --primary-600 : #504acc;
+    --primary-700 : #3c3799;
+    --primary-800 : #282566;
+    --primary-900 : #141233;
+
+	/* gold */
+	--gold-50:  #fff4cc;
+	--gold-100: #ffe699;
+	--gold-200: #ffd966;
+	--gold-300: #ffcc33;
+	--gold-400: #ffbf00;
+	--gold-500: #ffae00;
+	--gold-600: #e69c00;
+	--gold-700: #cc8a00;
+	--gold-800: #b37800;
+	--gold-900: #996600;
+
+    /*grey*/
+    --grey-50:  #f8fafc;
+    --grey-100: #f1f5f9;
+    --grey-200: #e2e8f0;
+    --grey-300: #cbd5e1;
+    --grey-400: #94a3b8;
+    --grey-500: #64748b;
+    --grey-600: #475569;
+    --grey-700: #334155;
+    --grey-800: #1e293b;
+    --grey-900: #0f172a;
+    
+    /*rest of the colors*/
+    --black: 		#222;
+    --white:		#fff;
+    --red-light : 	#f8d7da;
+    --red-mid : 	#e71425;
+    --red-dark : 	#842029;
+    --gree-light: 	#d1e7dd;
+    --green-mid:	#03a359;
+    --green-dark:	#0f5132;
+
+    /*fonts*/
+    --headingFont: 'Roboto', sans-serif;
+    --bodyFont: 'Nunito', sans-serif;
+    --smallText:0.7em;
+    /*rest of the vars*/
+    --backgroundColor:var(--grey-50);
+    --backgroundNavColor:var(--grey-900);
+    --textColor:var(--grey-900);
+    --borderRadius:0.25rem;
+    --letter-spacing: 1px;
+    --transition:0.3s ease-in-out all;
+    --max-width:1120px;
+    --fixed-width :600px;
+
+    /*box shadow*/
+    --shadow-1: 0 1px 3px  0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.6);
+    --shadow-2: 0 4px 6px  -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.6);
+    --shadow-3: 0 10px 15px  -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.5);
+    --shadow-4: 0 20px 25px  -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.4);
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Breadcrumbs */
+.breadcrumbs_rental{
+    background: rgba(202, 138, 0, 0.4);
+    height: 60vh; 
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+.breadcrumbs_rental .bread-list{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.breadcrumbs_row_rental h2{
+    font-size: 2rem;
+	color: var(--white);
+}
+
+.breadcrumbs_row_rental  li,a{
+    color: var(--white);
+    font-size: 20px;
+    padding: 10px 30px;
+}
+   
+.breadcrumbs_row_rental  a:hover{
+    padding: 10px 30px;
+    background: var(--green-dark);
+    transition: all 0.4s ease;
+}
+
+.divSection{
+    padding:20px;
+    display: grid;
+    grid-template-columns: 1fr 4fr
+}
+/* Product Grid */
+.product-grid_rental {
+    /* padding-top: 2%; */
+    text-align: center;
+    color: var(--grey-900);
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+.category-title_rental h1{
+    font-size: 2rem;
+    border-top: 5px #282566;
+}
+.product-list_rental {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    /* padding: 20px; */
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Product Card */
+.product-card_rental {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(26.33% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: var(--white);
+    border: 1px solid var(--grey-200);
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    gap: 20px;
+}
+
+/* Pseudo-classes - Hover effect on product button */
+.product-card_rental:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.product-title_rental {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-price_rental {
+    color: var(--red-dark);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.product-image_rental {
+    max-width: 100%;
+    height: 200px; 
+}
+
+/* Pseudo-elements - Sale badge */
+.product-card_rental::before {
+    content: "For rent";
+    background-color: var(--red-mid);
+    color: var(--white);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    border-radius: 0 0 0 5px;
+    text-transform: uppercase;
+}
+.product-description_rental b{
+    color: var(--red-dark);
+    text-transform: uppercase;
+}
+
+.product-cost_rental{
+    color: var(--white);
+    padding: 5px;
+    background: var(--grey-400);
+    font-size: 20px;
+}

@@ -1,5 +1,7 @@
 import React from 'react'
 import './css/Footer.css'
+import { Link } from 'react-router-dom'
+
 
 function Footer() {
   return (
@@ -17,7 +19,7 @@ function Footer() {
 								<ul class="social">
 									<li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
                   
-                  <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                  					<li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
 
 									<li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
 
