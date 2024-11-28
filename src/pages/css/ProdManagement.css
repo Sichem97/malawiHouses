@@ -1,0 +1,302 @@
+
+:root{
+    /*colors*/
+    --primary-100 : #e2e0ff;
+    --primary-200 : #c1beff;
+    --primary-300 : #a29dff;
+    --primary-400 : #837dff;
+    --primary-500 : #645cff;
+    --primary-600 : #504acc;
+    --primary-700 : #3c3799;
+    --primary-800 : #282566;
+    --primary-900 : #141233;
+
+	/* gold */
+	--gold-50:  #fff4cc;
+	--gold-100: #ffe699;
+	--gold-200: #ffd966;
+	--gold-300: #ffcc33;
+	--gold-400: #ffbf00;
+	--gold-500: #ffae00;
+	--gold-600: #e69c00;
+	--gold-700: #cc8a00;
+	--gold-800: #b37800;
+	--gold-900: #996600;
+
+    /*grey*/
+    --grey-50: #f8fafc;
+    --grey-100: #f1f5f9;
+    --grey-200: #e2e8f0;
+    --grey-300: #cbd5e1;
+    --grey-400: #94a3b8;
+    --grey-500: #64748b;
+    --grey-600: #475569;
+    --grey-700: #334155;
+    --grey-800: #1e293b;
+    --grey-900: #0f172a;
+    
+    /*rest of the colors*/
+    --black: #222;
+    --white:#fff;
+    --red-light : #f8d7da;
+    --red-mid : #f7192c;
+    --red-dark : #842029;
+
+    /*fonts*/
+    --headingFont: 'Roboto', sans-serif;
+    --bodyFont: 'Nunito', sans-serif;
+    --smallText:0.7em;
+    /*rest of the vars*/
+    --backgroundColor:var(--grey-50);
+    --backgroundNavColor:var(--grey-900);
+    --textColor:var(--grey-900);
+    --borderRadius:0.25rem;
+    --letter-spacing: 1px;
+    --transition:0.3s ease-in-out all;
+    --max-width:1120px;
+    --fixed-width :600px;
+
+    /*box shadow*/
+    --shadow-1: 0 1px 3px  0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.6);
+    --shadow-2: 0 4px 6px  -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.6);
+    --shadow-3: 0 10px 15px  -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.5);
+    --shadow-4: 0 20px 25px  -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.4);
+}
+
+.Main_Prod{
+    color: var(--grey-900);
+    background: rgba(255, 255, 255, 0.6);
+
+}
+.Main_Prod .Link_Container{
+    background: var(--black);
+    display: flex;
+    align-items: center ;
+    justify-content: space-around;
+    padding: 10px 30px ;
+}
+.Link_Container a{
+    color: var(--white);
+}
+.Link_Container a:hover{
+    border-radius: 50px 0 50px 0;
+    color: var(--black);
+    background: var(--gold-900);
+    transition: 0.2s;
+}
+.Search_Container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--grey-500);
+}
+.Search_Container div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Search_Container span{
+    font-size: 20px;
+}
+.Search_Container select{
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+}
+.Item_Container{
+    margin: 5px 10%;
+}
+.Box_Container{
+
+}
+.Box_Container .Box_Item{
+    display: block;
+}
+
+.Box_Container .Box_Item .Box_Items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--grey-500);
+    margin: 5px 0;
+}
+.Box_Container .Box_Item .Box_Items img{
+    width: 200px;
+    height: 150px;
+}
+.Box_Items div{
+    display: flex;
+    flex-direction: column;
+}
+.Box_Items section button{
+    font-size: 18px;
+    margin: 10px 3px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--green-mid);
+    color: var(--white);
+}
+
+.Box_Items section span button{
+    font-size: 18px;
+    margin: 10px 3px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--red-mid);
+    color: var(--white);
+}
+
+.Box_Items div b{
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    padding: 2px 0;
+}
+.Box_Items div i{
+    font-size: 18px;
+    font-weight: bolder;
+    letter-spacing: var(--letter-spacing);
+    color: var(--white);
+    background: var(--black);
+    border-radius: var(--borderRadius);
+    padding: 2px 0;
+}
+.Box_Items div p{
+    font-size: 16px;
+    font-size: 18px;
+    font-weight: bolder;
+    letter-spacing: var(--letter-spacing);
+    padding: 2px 0;
+    color: var(--white);
+
+}
+
+/* ------------- */
+/* Employee List */
+/* ------------- */
+
+
+.Cation_Container{
+    background: rgba(0,0,0,0.4);
+    padding: 0 50px;
+    margin: 0 50px;
+}
+.Cation_Container h2{
+    font-size: 2rem;
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.Cation_Container .employee_card{
+    padding: 5px 0;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(0,0,0,0.6);
+}
+
+.Cation_Container .employee_card div{
+    margin: 15px;
+}
+
+.Cation_Container .employee_card div li{
+    font-size: 18px;
+    margin: 2px;
+}
+
+.Cation_Container .employee_card div span{
+    color: var(--green-mid);
+}
+
+
+.Cation_Container .employee_card div i{
+    color: var(--gold-700);
+}
+
+.Cation_Container .employee_card div button{
+    color: var(--white);
+    background: rgba(0,0,0,0.6);
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: var(--borderRadius);
+    font-size: 15px;
+}
+
+.Cation_Container .employee_card div button:hover{
+    background: rgba(255, 26, 26, 0.6);
+    color: var(--white);
+    transition: 0.3s;
+}
+
+/* -------------------- */
+/* End of Employee List */
+/* -------------------- */
+
+
+/* -------------------- */
+/* DashAuthentification */
+/* -------------------- */
+.request_card{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.request_card div img{
+    width: 500px;
+    height: 300px;
+}
+.Cation_Container .request_card{
+    padding: 5px 0;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(0,0,0,0.6);
+}
+
+.Cation_Container .request_card div p{
+    font-size: 18px;
+    margin: 2px;
+}
+
+.Cation_Container .request_card .confirm button{
+    color: var(--white);
+    background: rgba(0,0,0,0.6);
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: var(--borderRadius);
+    font-size: 15px;
+}
+
+.Cation_Container .request_card .confirm button:hover{
+    background: rgba(0, 212, 18, 0.6);
+    color: var(--white);
+    transition: 0.3s;
+}
+
+.Cation_Container .request_card .declin button{
+    color: var(--white);
+    background: rgba(0,0,0,0.6);
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: var(--borderRadius);
+    font-size: 15px;
+}
+
+.Cation_Container .request_card .declin button:hover{
+    background: rgba(255, 26, 26, 0.6);
+    color: var(--white);
+    transition: 0.3s;
+}
+
+
+/* --------------------------- */
+/* End of DashAuthentification */
+/* --------------------------- */

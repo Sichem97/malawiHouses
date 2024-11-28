@@ -1,0 +1,370 @@
+:root{
+    /*colors*/
+    --primary-100 : #e2e0ff;
+    --primary-200 : #c1beff;
+    --primary-300 : #a29dff;
+    --primary-400 : #837dff;
+    --primary-500 : #645cff;
+    --primary-600 : #504acc;
+    --primary-700 : #3c3799;
+    --primary-800 : #282566;
+    --primary-900 : #141233;
+
+    /* gold */
+    --gold-50:  #fff4cc;
+    --gold-100: #ffe699;
+    --gold-200: #ffd966;
+    --gold-300: #ffcc33;
+    --gold-400: #ffbf00;
+    --gold-500: #ffae00;
+    --gold-600: #e69c00;
+    --gold-700: #cc8a00;
+    --gold-800: #b37800;
+    --gold-900: #996600;
+
+    /*grey*/
+    --grey-50:  #f8fafc;
+    --grey-100: #f1f5f9;
+    --grey-200: #e2e8f0;
+    --grey-300: #cbd5e1;
+    --grey-400: #94a3b8;
+    --grey-500: #64748b;
+    --grey-600: #475569;
+    --grey-700: #334155;
+    --grey-800: #1e293b;
+    --grey-900: #0f172a;
+    
+    /*rest of the colors*/
+    --black:        #222;
+    --white:        #fff;
+    --red-light :   #f8d7da;
+    --red-light :   #f7192c;
+    --red-dark :    #842029;
+    --gree-light:   #d1e7dd;
+    --green-mid:    #03a359;
+    --green-dark:   #0f5132;
+
+    /*fonts*/
+    --headingFont: 'Roboto', sans-serif;
+    --bodyFont: 'Nunito', sans-serif;
+    --smallText:0.7em;
+    /*rest of the vars*/
+    --backgroundColor:var(--grey-50);
+    --backgroundNavColor:var(--grey-900);
+    --textColor:var(--grey-900);
+    --borderRadius:0.25rem;
+    --letter-spacing: 1px;
+    --transition:0.3s ease-in-out all;
+    --max-width:1120px;
+    --fixed-width :600px;
+    --facebook:#5d82d1;
+    --twitter:#40bff5;
+    --google-plus:#eb5e4c;
+    --linkedin:#238cc8;
+    --pinterest:#e13138;
+
+    /*box shadow*/
+    --shadow-1: 0 1px 3px  0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.6);
+    --shadow-2: 0 4px 6px  -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.6);
+    --shadow-3: 0 10px 15px  -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.5);
+    --shadow-4: 0 20px 25px  -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.4);
+}
+
+.news-single_section{
+    padding: 60px 0 90px;
+    background: var(--grey-100);
+    color: var(--grey-900);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.news-single_row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.breadcrumbs{
+    background: rgba(202, 138, 0, 0.4);
+    height: 40vh; 
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.breadcrumbs_row .bread-list{
+display: flex;
+text-align: center;
+align-items: center;
+justify-content: space-around;
+}
+
+.breadcrumbs_row h2{
+    font-size: 4rem;
+    color: var(--white);
+}
+
+.breadcrumbs_row  li,a{
+ color: var(--white);
+ font-size: 20px;
+ padding: 10px 30px;
+}
+
+.breadcrumbs_row  a:hover{
+    padding: 10px 30px;
+    background: var(--green-dark);
+     transition: all 0.4s ease;
+}
+
+.prev-next {
+    text-align: right;
+    margin: 0 30px;
+    padding: 10px;
+    margin: 0 20px;
+}
+.prev-next button{
+    width: 80px;
+    height: 40px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid var(--primary-200);
+    color: #555;
+    border-radius: 4px;
+    margin: 0 5px;
+
+}
+.prev-next button:hover{
+    color:var(--white);
+    background:var(--green-mid);
+    border-color:transparent;
+    transition: 0.3s;
+}
+
+/*==================
+    Blog Sidebar 
+==================*/
+
+.single-main{
+    box-shadow: var(--shadow-4) ;
+    padding:25px;
+    margin: 25px;
+    border-radius: 25px;
+}
+
+.main-sidebar {
+    background: #fff;
+    margin-top: 30px;
+    background: transparent;
+}
+.main-sidebar .single-widget {
+    margin-bottom: 30px;
+    padding: 40px;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.10);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.10);
+    border-radius: 8px;
+}
+.main-sidebar .single-widget .title {
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    display: block;
+    background: #fff;
+    padding-left: 12px;
+}
+.main-sidebar .single-widget .title::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -1px;
+    height: 100%;
+    width: 3px;
+    background: var(--gold-600);
+}
+.main-sidebar .single-widget:last-child{
+    margin:0;
+}
+.main-sidebar .search{
+    position:relative;
+}
+.main-sidebar .search input {
+    width: 100%;
+    height: 45px;
+    box-shadow: none;
+    text-shadow: none;
+    font-size: 14px;
+    border: none;
+    color: #222;
+    background: transparent;
+    padding: 0 70px 0 20px;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    border-radius: 0;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+.main-sidebar .search .button {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    height: 44px;
+    width: 50px;
+    line-height: 45px;
+    box-shadow: none;
+    text-shadow: none;
+    text-align: center;
+    border: none;
+    font-size: 14px;
+    color: #fff;
+    background: #333;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    border-radius: 0 5px 5px 0;
+}
+.main-sidebar .search .button:hover {
+    background:var(--green-dark);
+    color:#fff;
+}
+
+/*==================
+ End Blog Sidebar 
+==================*/
+
+
+/*=====================
+    Category List 
+=====================*/
+
+.main-sidebar .categor-list_voush {
+    margin-top: 15px;
+}
+.main-sidebar .categor-list_voush li {
+    margin-bottom: 10px;
+}
+.main-sidebar .categor-list_voush li:last-child{
+    margin-bottom:0px;
+}
+.main-sidebar .categor-list_voush li a {
+    display: block;
+    color: var(--grey-600);
+    font-size:14px;
+}
+.main-sidebar .categor-list_voush li a:hover{
+    color:var(--green-mid);
+    padding-left:7px;
+    transition: 0.3s;
+}
+.main-sidebar .categor-list_voush li a i {
+    display: inline-block;
+    margin-right:0px;
+    font-size: 9px;
+    transform: translateY(-1px);
+    opacity:0;
+    visibility:hidden;
+    -webkit-transition:all 0.4s ease;
+    -moz-transition:all 0.4s ease;
+    transition:all 0.4s ease;
+}
+.main-sidebar .categor-list_voush li a:hover i{
+    margin-right: 6px;
+    opacity:1;
+    visibility:visible;
+}
+
+/*=====================
+  End Category List 
+=====================*/
+
+/*=====================
+    Recent Posts 
+=====================*/
+
+.main-sidebar .single-post {
+    position: relative;
+    border-bottom: 1px solid var(--grey-300);
+    display: inline-block;
+    padding: 17px 0;
+}
+.main-sidebar .single-post:last-child{
+    padding-bottom:0px;
+    border:none;
+}
+.main-sidebar .single-post .image img{
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+.main-sidebar .single-post .content{
+    padding-left:100px;
+}
+.main-sidebar .single-post .content h5 {
+    line-height: 18px;
+}
+.main-sidebar .single-post .content h5 a {
+    color: var(--grey-400);
+    font-weight: 500;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.main-sidebar .single-post .content h5 a:hover{
+    color:var(--green-mid);
+    transition: 0.3s;
+}
+.main-sidebar .single-post .content .comment li{
+    color:var(--grey-500);
+    display:inline-block;
+    margin-right:15px;
+    font-weight:400;
+    font-size:14px;
+}
+.main-sidebar .single-post .content .comment li:last-child{
+    margin-right:0;
+}
+.main-sidebar .single-post .content .comment li i{
+    display:inline-block;
+    margin-right:5px;
+}
+/*=====================
+    End Recent Posts 
+=====================*/
+
+/*================
+    Blog Tags 
+================*/
+.main-sidebar .side-tags .tag{
+    margin-top:40px;
+}
+.main-sidebar .side-tags .tag li {
+    display: inline-block;
+    margin-right: 7px;
+    margin-bottom: 20px;
+}
+.main-sidebar .side-tags .tag li a {
+    background: var(--white);
+    color: var(--grey-700);
+    padding: 8px 14px;
+    text-transform: capitalize;
+    border-radius: 0;
+    font-size: 15px;
+    background: var(--grey-200);
+    border-radius: 4px;
+}
+.main-sidebar .side-tags .tag a:hover{
+    color:var(--gold-600);
+    background:var(--green-dark);
+    border-color:transparent;
+    transition: 0.3s;
+}
+/*================
+   End Blog Tags 
+================*/

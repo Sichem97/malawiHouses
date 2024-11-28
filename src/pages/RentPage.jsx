@@ -9,8 +9,9 @@ import { Link } from 'react-router-dom'
 export default function RentPage() {
   return (
     <div>
-       <>
-      <Header/>
+
+      <>
+        <Header/>
       </>
 
       <>
@@ -18,12 +19,12 @@ export default function RentPage() {
       <div class="breadcrumbs_rental">
         <div class="breadcrumbs_row_rental">
           <div class="section-title">
-            <h2>Rental Service</h2>
+            <h2>For Rent</h2>
             <img src="assets/carry2.png" alt="logo2_picture"/>	 
                 <ul class="bread-list">
                   <li><Link to={'/'}>Home</Link></li>
                   <li><i class="fa fa-angle-double-right"></i></li>
-                  <li class="active">Rental Service</li>
+                  <li class="active">Rental Services</li>
                 </ul>
           </div>
         </div>
@@ -32,16 +33,13 @@ export default function RentPage() {
       </>
 
       <>
+        <Rental/>
+      </>
       
+      <>
+        <Footer/>
       </>
 
-      <>
-      <Rental/>
-      </>
-      
-      <>
-      <Footer/>
-      </>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
-import './css/Blog.css'
+// import './css/Blog.css'
 import BreadCrumbs from './Component/BreadCrumbs'
 import SingleNews from './Component/SingleNews'
 

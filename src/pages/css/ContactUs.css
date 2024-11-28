@@ -78,7 +78,7 @@ ul{
 /* Title */
 .breadcrumbs_form{
     background: rgba(202, 138, 0, 0.4);
-    height: 60vh; 
+    height: 40vh; 
     display: flex;
     align-items: center;
     text-align: center;
@@ -116,7 +116,7 @@ justify-content: space-around;
 
 }
 .Contact_row{
-	background: url('./picture1P.png');
+	background: url('./IMG-20241126-WA0056.png');
 	background-position: right;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -129,66 +129,29 @@ justify-content: space-around;
 	align-items: center;
 	text-align: center;
 }
-.Contact_row .appointment-image{
-	display: flex;
-	align-items: center;
-	text-align: left;
-}
-.Contact_row .appointment-image img{
-	width: 300px;
-	height: 350px;
-	size: cover;
-}
 .form_row{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+	/* display: flex;
+	flex-direction: column; */
 }
-.appointment.single-page {
-	background: #fff;
-	padding-top: 100px 0;
-	padding: 0;
-	padding: 100px 0;
-}
-.appointment.single-page .appointment-inner {
-	padding: 40px;
-	box-shadow: 0px 0px 10px #00000024;
-	border-radius: 5px;
-}
-.appointment.single-page .title{
-
-}
-
-.appointment.single-page .title h3 {
-	font-size: 25px;
-	display: block;
-	margin-bottom: 10px;
-	font-weight:600;
-}
-.appointment.single-page .title p{
-
-}
-
 .appointment .form{
 	margin-top:30px;
-}
-
-.appointment .form .form-group{
-
 }
 
 .appointment .form input {
 	width: 100%;
 	height: 50px;
-	border: 1px solid #eee;
+	border: 1px solid var(--grey-300);
+	background-color: var(--white);
 	text-transform: capitalize;
 	padding: 0px 18px;
 	color: var(--grey-600);
 	font-size: 14px;
 	font-weight:400;
-	border-radius:0;
 	border-radius: 4px;
+	margin: 3px 0;
 }
-.form-group div{
+
+.appointment .form_group div{
 	display: flex;
 	align-items:center;
 	text-align: center;
@@ -196,23 +159,24 @@ justify-content: space-around;
 	justify-content: space-between;
 	width: 100%;
 	height: 50px;
-	border: 1px solid #eee;
+	border: 1px solid var(--grey-300);
 	text-transform: capitalize;
 	padding: 0px 18px;
 	color: var(--grey-600);
 	font-size: 14px;
 	font-weight:400;
+	margin: 3px 0;
 }
 
-.form-group select{
-	text-align: center;
+.appointment .form_group select{
+	padding: 0 54px;
+	text-align: left;
 	border: none;
 	background-color: transparent;
 	color: var(--gold-900);
 	font-size: 15px;
-	padding: 2px 0;
 }
-.form select::before {
+.appointment .form select::before {
 	position: absolute;
 	content: "";
 	left: 0;
@@ -231,7 +195,8 @@ justify-content: space-around;
 	width: 100%;
 	height:100px;
     padding: 18px;
-	border:1px solid #eee;
+	border:1px solid var(--grey-300);
+	border: 1px solid var(--grey-300);
 	text-transform:capitalize;
 	resize:none;
 	border-radius: 4px;
@@ -250,6 +215,7 @@ justify-content: space-around;
 	text-transform: uppercase;
 	display: block;
 	border: 0px solid;
+	border-radius: var(--borderRadius);
 	color: var(--white);
     background: var(--grey-800);
 	-webkit-transition: all 0.4s ease;

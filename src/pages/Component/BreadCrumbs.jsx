@@ -17,7 +17,7 @@ export default function BreadCrumbs() {
                   </ul>
               </div>
             </div>
-		</div>
+		</div> 
 		 {/* End Breadcrumbs  */}
     </div>
   )

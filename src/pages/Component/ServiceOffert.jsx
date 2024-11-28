@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/Offert.css'
+
 import { Link } from 'react-router-dom'
-import ServiceData from '../Data/ServiceData'
 
 export default function ServiceOffert() {
   return (
@@ -53,7 +53,7 @@ export default function ServiceOffert() {
           </div>
         </div>
           </section>
-          </>
+        </>
           {/* --------------------------------------------------- */}
             <>
             
@@ -76,12 +76,13 @@ export default function ServiceOffert() {
                     <p>
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, corrupti. Ratione sequi unde maxime fuga eveniet at rem totam vel, sint vero quas quo in quibusdam ad optio voluptatem magnam temporibus nesciunt. Veniam perferendis in aspernatur, vero quasi deleniti sint recusandae voluptatum tempore incidunt adipisci accusamus quidem, nam soluta maxime facere repellat, hic voluptates quaerat voluptatem obcaecati dolores temporibus. Ipsa illum fugiat ex itaque corporis, laborum blanditiis praesentium reiciendis corrupti amet culpa officia aliquam nisi magni sit, iusto beatae molestiae soluta neque non architecto labore maxime. Magnam vel quaerat nobis?
                     </p>
-                    <ul className="services">
-                      <li><a href="#">Insurance</a></li>
-                      <li><a href="#">Maintenance</a></li>
-                      <li><a href="#">Negociation</a></li>
-                      <li><a href="#">Management</a></li>
-                      <li><a href="#">Relocation</a></li>
+                    <ul className="services" id='#servicesRen'>
+                      <li><a href="#servicesRen">Insurance</a></li>
+                      <li><a href="#servicesRen">Maintenance</a></li>
+                      <li><a href="#servicesRen">Negociation</a></li>
+                      <li><a href="#servicesRen">Management</a></li>
+                      <li><a href="#servicesRen">Relocation</a></li>
+                      <li><a href="#servicesRen">Renovation</a></li>
                     </ul>
                   </div>
               </div>
@@ -103,25 +104,7 @@ export default function ServiceOffert() {
 						</div>
 				</div>
 
-				<div class="row-col">
-          <>
-            {ServiceData.map((value,index)=>{
-              return(
-                <>
-                {/* Start Single Service  */}
-                <div class="single-service" id='service2'>
-                  <a href="#service2">
-                    <img src={value.cover} alt="" />
-                    <h4>{value.title}</h4>
-                    <p>{value.text}</p>
-                  </a>
-                </div> 
-                {/* End Single Service  */}
-                </>
-              )
-            })}
-          </>	 
-				</div>
+				
 			</div>
 		</section>
 		{/* / End service  */}

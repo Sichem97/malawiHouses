@@ -4,93 +4,86 @@ import Footer from './Footer';
 import Header from './Header';
 import { Link } from 'react-router-dom';
 
-
 const AboutUs = () => {
     const teamMembers = [
-        { name: 'Sichem M.', role: 'role', image: './assets/Profile/profile2.png' },
-        { name: 'Yotcheb K.', role: 'role', image: './assets/Profile/profile3.png' },
-        { name: 'Priscilla ', role: 'role', image: './assets/Profile/profile1.png' },
+        { name: 'Sichem M.', role: 'CEO & Founder', image: '/assets/Profile/profile2.png' },
+        { name: 'Yotcheb K.', role: 'Chief Technology Officer', image: '/assets/Profile/profile3.png' },
+        { name: 'Priscilla', role: 'Head of Marketing', image: '/assets/Profile/profile1.png' },
     ];
 
     return (
         <>
-            <Header/>
+            <Header />
 
-            <>
-            {/* Breadcrumbs  */}
-            <div class="breadcrumbs_About">
-                <div class="breadcrumbs_row_About">
-                    <div class="section-title">
-                        <h2>About-Us</h2>
-                        <img src="assets/carry2.png" alt="logo2_picture"/>							
-                        <ul class="bread-list">
+            <div className="breadcrumbs_About">
+                <div className="breadcrumbs_row_About">
+                    <div className="section-title">
+                        <h2>About Us</h2>
+                        <img src="/assets/carry2.png" alt="logo2_picture" />                            
+                        <ul className="bread-list">
                             <li><Link to={'/'}>Home</Link></li>
-                            <li><i class="fa fa-angle-double-right"></i></li>
-                            <li class="active">About-Us</li>
+                            <li><i className="fa fa-angle-double-right"></i></li>
+                            <li className="active">About Us</li>
                         </ul>
                     </div>
                 </div>
             </div>
-		    {/* End Breadcrumbs  */}
-            </>
             
             <div className="about-us">
-                    <div class="intro">
-                        <div className='intro-info'>
-                            <h2>We Deliver Happiness</h2>
-                            <p>The greatest, most sustainable happiness comes from making others happy.
-                            It is our privilege to deliver you happiness every single day.</p>
+                <div className="intro">
+                    <div className='intro-info'>
+                        <h2>We Deliver Happiness</h2>
+                        <p>Welcome to our platform, your one-stop solution for all real estate needs in Malawi. Whether you're looking to buy, sell, or rent properties, we've got you covered. Our services extend beyond just transactions; we also offer property insurance, management, relocation, renovation, and maintenance. Our mission is to make your real estate journey seamless and enjoyable.</p>
                     </div>
+                </div>
+
+                <section className="mission-vision">
+                    <div className="mission">
+                        <h2>Our Mission</h2>
+                        <p id='p'>Our mission is to make property transactions and management frictionless and secure. We strive to provide a comprehensive suite of services that empower our clients to achieve their real estate goals efficiently and effectively.</p>
                     </div>
+                    <div className="vision">
+                        <h2>Our Vision</h2>
+                        <p id='p'>Our vision is to be the leading real estate platform that empowers individuals and businesses to find their dream homes, invest wisely, and manage their properties with ease. We aim to transform the real estate industry through innovation, integrity, and exceptional customer service.</p>
+                    </div>
+                </section>
 
-                    <section className="mission-vision">
-                        <div className="mission">
-                            <h2>Our Mission</h2>
-                            <p id='p'>Make communications frictionless and secure.</p>
-                        </div>
-                        <div className="vision">
-                            <h2>Our Vision</h2>
-                            <p id='p'>Communications empowering people to accomplish more.</p>
-                        </div>
-                    </section>
+                <section className="values">
+                    <h2>Our Values</h2>
+                    <p id='p'>We believe in integrity, community, and innovation. These values guide us in every decision we make. Integrity ensures that we operate transparently and ethically, community fosters collaboration and support, and innovation drives us to continuously improve and adapt in a rapidly changing world.</p>
+                </section>
 
-                    <section className="values">
-                        <h2>Our Values</h2>
-                        <p id='p'>We believe in integrity, community, and innovation. Our values guide us in every decision we make.</p>
-                    </section>
+                <section className="team">
+                    <h2>Meet Our Team</h2>
+                    <div className="team-members">
+                        {teamMembers.map((member, index) => (
+                            <div key={index} className="team-member">
+                                <img src={member.image} alt={member.name} />
+                                <h3>{member.name}</h3>
+                                {/* <p>{member.role}</p> */}
+                            </div>
+                        ))}
+                    </div>
+                </section>
 
-                    <section className="team">
-                        <h2>Meet Our Team</h2>
-                        <div className="book-effect"></div>
-                        <div className="team-members">
-                            {teamMembers.map((member, index) => (
-                                <div key={index} className="team-member">
-                                    <img src={member.image} alt={member.name} />
-                                    <h3>{member.name}</h3>
-                                    <p>{member.role}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </section>
+                <section className="contact">
+                    <h2>Contact Us</h2>
+                    <p id='p'>If you have any questions or inquiries, feel free to reach out to us. Our team is here to assist you and ensure your experience with our services is exceptional.</p>
+                    <p id='p'>Email: <a href="mailto:info@malawihouse.com">info@malawihouse.com</a></p>
+                    <p id='p'>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+                </section>
 
-                    <section className="contact">
-                        <h2>Contact Us</h2>
-                        <p id='p'>If you have any questions or inquiries, feel free to reach out!</p>
-                        <p id='p'>Email: <a href="mailto:info@malawihouse.com">info@malawihouse.com</a></p>
-                        <p id='p'>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
-                    </section>
-
-                    <section className="partners">
-                        <h2>In Parternership with</h2>
-                        <div className="partner-logos">
-                            <img src="house-1867187_1280.jpg" alt="Partner 1" />
-                            <img src="house-1867187_1280.jpg" alt="Partner 2" />
-                            <img src="house-1867187_1280.jpg" alt="Partner 3" />
-                        </div>
-                    </section>
+                <section className="partners">
+                    <h2>In Partnership with</h2>
+                    <div className="partner-logos">
+                        <img src="/assets/house-1867187_1280.jpg" alt="Partner 1" />
+                        <img src="/assets/house-1867187_1280.jpg" alt="Partner 2" />
+                        <img src="/assets/house-1867187_1280.jpg" alt="Partner 3" />
+                    </div>
+                </section>
             </div>
 
-            <Footer/>
+            <Footer />
         </>
     );
 };

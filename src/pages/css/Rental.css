@@ -72,7 +72,7 @@ a{
 /* Breadcrumbs */
 .breadcrumbs_rental{
     background: rgba(202, 138, 0, 0.4);
-    height: 60vh; 
+    height: 40vh; 
     display: flex;
     align-items: center;
     text-align: center;
@@ -88,6 +88,7 @@ a{
 .breadcrumbs_row_rental h2{
     font-size: 2rem;
 	color: var(--white);
+    text-transform: uppercase;
 }
 
 .breadcrumbs_row_rental  li,a{
@@ -128,7 +129,7 @@ a{
     flex-wrap: wrap;
     gap: 50px;
     /* padding: 20px; */
-    width: 100%;
+    width: 1240px;
     align-items: center;
     justify-content: center;
 }
@@ -166,8 +167,8 @@ a{
 }
 
 .product-image_rental {
-    max-width: 100%;
-    height: 200px; 
+    max-width: 250px;
+    height: 180px; 
 }
 
 /* Pseudo-elements - Sale badge */
@@ -190,6 +191,15 @@ a{
 .product-cost_rental{
     color: var(--white);
     padding: 5px;
-    background: var(--grey-400);
+    background: var(--black);
     font-size: 20px;
+}
+
+.Nofound p{
+ font-size: 50px;
+}
+
+.Nofound img{
+ width: 200px;
+ height: 200px;
 }

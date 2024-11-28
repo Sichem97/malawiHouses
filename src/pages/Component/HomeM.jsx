@@ -4,6 +4,11 @@ import "../css/Home.css"
 import ServiceOffert from "./ServiceOffert"
 import Fact from "./Fact"
 import NewsUp from "./NewsUp"
+import SliderService from "./SliderService"
+import Testemony from '../Component/Testemony'
+import ServiceControls from './ServiceControls'
+
+
 
 const HomeM = () => {
   return (
@@ -19,11 +24,23 @@ const HomeM = () => {
         </> 
 
         <>
+        <SliderService/>
+        </>
+
+        <>
         <Fact/>
         </>
 
         <>
         <NewsUp/>
+        </>
+
+        <>
+        <ServiceControls/>
+        </>
+        
+        <>
+        <Testemony/>
         </>
       </section>
     </div>

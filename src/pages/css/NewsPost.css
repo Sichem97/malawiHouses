@@ -1,0 +1,275 @@
+:root{
+    /*colors*/
+    --primary-100 : #e2e0ff;
+    --primary-200 : #c1beff;
+    --primary-300 : #a29dff;
+    --primary-400 : #837dff;
+    --primary-500 : #645cff;
+    --primary-600 : #504acc;
+    --primary-700 : #3c3799;
+    --primary-800 : #282566;
+    --primary-900 : #141233;
+
+	/* gold */
+	--gold-50:  #fff4cc;
+	--gold-100: #ffe699;
+	--gold-200: #ffd966;
+	--gold-300: #ffcc33;
+	--gold-400: #ffbf00;
+	--gold-500: #ffae00;
+	--gold-600: #e69c00;
+	--gold-700: #cc8a00;
+	--gold-800: #b37800;
+	--gold-900: #996600;
+
+    /*grey*/
+    --grey-50:  #f8fafc;
+    --grey-100: #f1f5f9;
+    --grey-200: #e2e8f0;
+    --grey-300: #cbd5e1;
+    --grey-400: #94a3b8;
+    --grey-500: #64748b;
+    --grey-600: #475569;
+    --grey-700: #334155;
+    --grey-800: #1e293b;
+    --grey-900: #0f172a;
+    
+    /*rest of the colors*/
+    --black: 		#222;
+    --white:		#fff;
+    --red-light : 	#f8d7da;
+    --red-light : 	#f7192c;
+    --red-dark : 	#842029;
+    --gree-light: 	#d1e7dd;
+    --green-mid:	#03a359;
+    --green-dark:	#0f5132;
+
+    /*fonts*/
+    --headingFont: 'Roboto', sans-serif;
+    --bodyFont: 'Nunito', sans-serif;
+    --smallText:0.7em;
+    /*rest of the vars*/
+    --backgroundColor:var(--grey-50);
+    --backgroundNavColor:var(--grey-900);
+    --textColor:var(--grey-900);
+    --borderRadius:0.25rem;
+    --letter-spacing: 1px;
+    --transition:0.3s ease-in-out all;
+    --max-width:1120px;
+    --fixed-width :600px;
+    --facebook:#5d82d1;
+    --twitter:#40bff5;
+    --google-plus:#eb5e4c;
+    --linkedin:#238cc8;
+    --pinterest:#e13138;
+
+    /*box shadow*/
+    --shadow-1: 0 1px 3px  0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.6);
+    --shadow-2: 0 4px 6px  -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.6);
+    --shadow-3: 0 10px 15px  -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.5);
+    --shadow-4: 0 20px 25px  -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.4);
+}
+
+.news-single_section .single-main {
+    margin-top: 30px;
+    background: #fff;
+    padding: 30px;
+    -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.10);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.10);
+    border-radius: 8px;
+}
+.single-main{
+
+}
+.news-single_section .news-head{}
+
+.news-single_section .news-head img{
+    width:100%;
+    height:100%;
+}
+
+.news-single_section .news-title {
+    font-size: 25px;
+    margin: 20px 0;
+}
+.news-single_section .news-title a {
+    color: var(--grey-900);
+    font-weight: 600;
+}
+.news-single_section .news-title a:hover {
+    color: var(--green-mid);
+    transition: 0.2s;
+}
+
+/*=================
+    Image Gallery 
+=================*/
+
+.news-text p{
+    text-align: justify;
+}
+.news-single_section .image-gallery_row{
+    display:inline-flex;
+    padding: 0 50px;
+}
+.news-single_section .image-gallery {
+    margin-bottom: 20px;
+}
+.news-single_section .image-gallery .single-image img{
+    width: 350px;
+    height: 250px;
+}
+.news-single_section .image-gallery .single-image {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 5px;
+    background-color: var(--grey-500);
+    border-radius: 5%;
+}
+.news-single_section .image-gallery .single-image:hover img{
+    -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+    transform:scale(1.2);
+    transition: 0.5s;
+}
+/*====================
+   End Image Gallery 
+=====================*/
+
+/*==============
+    Blog Meta 
+===============*/
+
+.news-single_section .meta {
+	overflow: hidden;
+	border-top: 1px solid var(--grey-300);
+	border-bottom: 1px solid var(--grey-300);
+	width: 100%;
+	padding: 10px 0;
+	margin-bottom: 15px;
+}
+.news-single_section .meta span {
+	margin-right: 10px;
+	display: inline-block;
+}
+.news-single_section .meta span:last-child{
+	margin:0;
+}
+.news-single_section .meta span, .news-single_section .meta span a {
+	color: var(--grey-900);
+	font-weight: 400;
+    padding-left: 5px;
+}
+.news-single_section .meta span i {
+	margin-right: 5px;
+	color:var(--primary-900);
+}
+
+.news-single_section .meta-left{
+	float:left;
+    display: flex;
+    align-items:start;
+    text-align: left;
+    justify-content: space-between;
+}
+.news-single_section .meta-left .author img {
+	width: 45px;
+	height: 45px;
+	border-radius: 100%;
+	margin-right: 12px;
+}
+.news-single_section .meta-left span.date {
+	margin-top: 10px;
+}
+.news-single_section .meta-right {
+	float: right;
+	margin-top: 10px;
+}
+.news-single_section .news-content{
+	margin:20px 0;
+}
+.news-single_section .news-content p{
+	margin-bottom:10px;
+}
+.news-single_section .news-content p:last-child{
+	margin:0;
+}
+.news-single_section .news-text p {
+	font-size: 14px;
+	margin-bottom:20px;
+}
+/*==============
+  End Blog Meta 
+===============*/
+
+
+/*===============
+    Blockqoute 
+================*/
+
+.news-single_section blockquote {
+    background-color: var(--grey-500);
+    padding: 30px;
+    overflow: hidden;
+}
+.news-single_section blockquote::before {
+    opacity: 0.9;
+}
+.news-single_section .news-text blockquote p {
+    color: #fff;
+    margin: 0;
+    line-height: 26px;
+    font-size: 15px;
+    position: relative;
+}
+.news-single_section .blog-bottom {
+    overflow: hidden;
+}
+
+/*===============
+  End Blockqoute 
+================*/
+
+/*=================
+    Social Share 
+==================*/
+
+.news-single_section .social-share {
+    float: left;
+}
+.news-single_section .social-share li {
+    float: left;
+}
+.news-single_section .social-share li span{
+    padding-left:5px;
+}
+.news-single_section .social-share li.facebook a{
+    background:var(--facebook);
+}
+.news-single_section .social-share li.twitter a{
+    background:var(--twitter);
+}
+.news-single_section .social-share li.google-plus a{
+    background:var(--google-plus);
+}
+.news-single_section .social-share li.linkedin a{
+    background:var(--linkedin);
+}
+.news-single_section .social-share li.pinterest a{
+    background:var(--pinterest);
+}
+.news-single_section .social-share li a {
+    padding: 10px 20px;
+    display: block;
+    color: var(--white);
+}
+.news-single_section .social-share li a:hover{
+    background:var(--black);
+}
+
+/*=================
+  End Social Share 
+==================*/

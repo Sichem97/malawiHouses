@@ -242,8 +242,8 @@
   color: var(--grey-900);
 }
 .services .single-service{
-  width:250px;
-  height:250px;
+  width:350px;
+  height: 200px;
 	margin:15px 7px;
 	position:relative;
 	padding:20px;
@@ -272,7 +272,7 @@
 }
 .services .row-col{
   padding: 0 12%;
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr 1fr;
 }
 .services .row-col .single-service img{

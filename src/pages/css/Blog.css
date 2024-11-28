@@ -88,6 +88,7 @@ ul{
     animation: fadeIn 0.8s ease-in-out;
 
 }
+.meta-left
 .news-single_row{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -96,7 +97,7 @@ ul{
 /* Title */
 .breadcrumbs{
     background: rgba(202, 138, 0, 0.4);
-    height: 60vh; 
+    height: 40vh; 
     display: flex;
     align-items: center;
     text-align: center;
@@ -445,6 +446,7 @@ justify-content: space-around;
 	font-size:14px;
 	color:var(--grey-700);
 }
+.meta
 .news-single_section .form-group textarea {
 	border: 1px solid #ddd;
 	width: 700px;
@@ -541,6 +543,7 @@ justify-content: space-around;
 	margin-right: 5px;
 	color:var(--primary-900);
 }
+
 .news-single_section .meta-left{
 	float:left;
     display: flex;

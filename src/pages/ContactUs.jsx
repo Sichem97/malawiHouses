@@ -1,117 +1,200 @@
-import React from 'react'
-import Header from './Header'
-import Footer from './Footer'
-import './css/ContactUs.css'
-import { Link } from 'react-router-dom'
-
+import React, { useState } from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import './css/ContactUs.css';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function ContactUs() {
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    department: '',
+    district: '',
+    message: ''
+  });
+
+  const [message, setMessage] = useState('');
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+ 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const contactData = {
+      ...formData,
+      type: 'Contact'
+    };
+
+    // Save to localStorage
+    const contacts = JSON.parse(localStorage.getItem('contacts')) || [];
+    localStorage.setItem('contacts', JSON.stringify([...contacts, contactData]));
+
+    // Clear form fields and message
+    setFormData({ name: '', email: '', phone: '', department: '', district: '', message: '' });
+    setMessage('Your message has been sent successfully!');
+
+    // Redirect to "/" after 1500ms
+    setTimeout(() => navigate('/'), 1500);
+  };
+
   return (
     <div>
-		<>
-		<Header/>
-		</>
-		<>
-		{/* Breadcrumbs  */}
-		<div class="breadcrumbs_form">
-			<div class="breadcrumbs_row_form">
-				<div class="section-title">
-					<h2>Needs for Help? <br /> Get An Appointment</h2>
-					<img src="assets/carry2.png" alt="logo2_picture"/>							
-					<ul class="bread-list">
-							<li><Link to={'/'}>Home</Link></li>
-                            <li><i class="fa fa-angle-double-right"></i></li>
-                            <li class="active">Contact-Us</li>
-                        </ul>
-				</div>
-			</div>
-		</div>
-		{/* End Breadcrumbs  */}
+      <Header />
 
-       {/* Start Appointment  */}
-		<section class="appointment">
-			<div class="container">
-				<div class="Contact_row">
-					<div>
-						<form class="form" action="#">
-						<div class="form_row">
+      {/* Breadcrumbs */}
+      <div className="breadcrumbs_form">
+        <div className="breadcrumbs_row_form">
+          <div className="section-title">
+            <h2>Needs for Help? <br /> Get An Appointment</h2>
+            <img src="assets/carry2.png" alt="logo2_picture"/>
+            <ul className="bread-list">
+              <li><Link to={'/'}>Home</Link></li>
+              <li><i className="fa fa-angle-double-right"></i></li>
+              <li className="active">Contact-Us</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      {/* End Breadcrumbs */}
 
-							<div class="form-group">
-								<input name="name" type="text" placeholder="Name" required/>
-							</div>
+      {/* Start Appointment */}
+      <section className="appointment">
+        <div className="container">
+          <div className="Contact_row">
+            <div>
+				
+              <form className="form" onSubmit={handleSubmit}>
+                <div className="form_row">
+                  <div className="form_group">
+                    <input
+                      name="name"
+                      type="text"
+                      placeholder="Name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="form_group">
+                    <input
+                      name="email"
+                      type="email"
+                      placeholder="Email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="form_group">
+                    <input
+                      name="phone"
+                      type="text"
+                      placeholder="Phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="form_group">
+                    <div>
+                      <span className="current">Department </span>
+                      <select
+                        name="department"
+                        value={formData.department}
+                        onChange={handleChange}
+                        id="department"
+                      >
+                        <option value="">Select Department</option>
+                        <option value="Insurance_Services">Insurance Services</option>
+                        <option value="Property_maintenance">Property maintenance</option>
+                        <option value="Property_management">Property management</option>
+                        <option value="Property_Negociation">Property Negociation</option>
+                        <option value="Property_Rev">Property Rev</option>
+                        <option value="Relocation_services">Relocation services</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className="form_group">
+                    <div>
+                      <span className="current">District </span>
+                      <select
+                        name="district"
+                        value={formData.district}
+                        onChange={handleChange}
+                        id="district"
+                      >
+                        <option value="">Select District</option>
+                        <option value="Balaka">Balaka</option>
+                        <option value="Blantyre">Blantyre</option>
+                        <option value="Chikhwawa">Chikhwawa</option>
+                        <option value="Chiradzulu">Chiradzulu</option>
+                        <option value="Chitipa">Chitipa</option>
+                        <option value="Dedza">Dedza</option>
+                        <option value="Dowa">Dowa</option>
+                        <option value="Karonga">Karonga</option>
+                        <option value="Kasungu">Kasungu</option>
+                        <option value="Lilongwe">Lilongwe</option>
+                        <option value="Machinga">Machinga</option>
+                        <option value="Mangochi">Mangochi</option>
+                        <option value="Mchinji">Mchinji</option>
+                        <option value="Mulanje">Mulanje</option>
+                        <option value="Mwanza">Mwanza</option>
+                        <option value="Mzimba">Mzimba</option>
+                        <option value="Neno">Neno</option>
+                        <option value="Nkhata Bay">Nkhata Bay and Likoma</option>
+                        <option value="Nkhotakota">Nkhotakota</option>
+                        <option value="Nsanje">Nsanje</option>
+                        <option value="Ntcheu">Ntcheu</option>
+                        <option value="Ntchisi">Ntchisi</option>
+                        <option value="Phalombe">Phalombe</option>
+                        <option value="Rumphi">Rumphi</option>
+                        <option value="Salima">Salima</option>
+                        <option value="Southern">Southern</option>
+                        <option value="Thyolo">Thyolo</option>
+                        <option value="Zomba">Zomba</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
 
-							<div class="form-group"><div> <span class="current">Department :</span>
-								<select name="" id="departement">
-									<optgroup>
-										<option value="Insurance_Services">Insurance Services</option>
-										<option value="Property_maintenance">Property maintenance</option>
-										<option value="Property_Negociation">Property Negociation</option>
-										<option value="Property_manager">Property manager</option>
-										<option value="Relocation_services">Relocation services</option>
-									</optgroup>
-								</select></div>
-							</div>
+                <div className="form_group">
+                  <textarea
+                    name="message"
+                    placeholder="Write Your Message Here....."
+                    value={formData.message}
+                    onChange={handleChange}
+                  ></textarea>
+                </div>
 
-							<div class="form-group">
-								<input name="email" type="email" placeholder="Email" required/>
-							
-							</div>
-								
-							<div class="form-group"> 
-									<div><span class="current">District :</span>
-										<select name="" id="District">
-											<optgroup> 
-												<option value="Lilongwe">Lilongwe</option>
-												<option value="Blantyr">Blantyr</option>
-												<option value="Dowa">Dowa</option>
-												<option value="Mutshindi">Mutshindi</option>
-											</optgroup>
-										</select>
-									</div>
-							</div>
+                <div className="button_row">
+                  <div>
+                    <p>{message && <p className="text-green-500 mt-4">{message}</p>}</p>
+                  </div>
+                  <div className="button">
+                    <button type="submit" className="btn">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
 
-							<div class="form-group">
-								<input name="phone" type="text" placeholder="Phone" required/>
-							</div>
+            <div className="appointment-image">
+              {/* <img src="assets/Home_pub/picture1.png" alt="" /> */}
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* End Appointment */}
 
-							<div class="form-group">
-								<div><span class="current">Area :</span>
-									<select name="" id="Area">
-										<option value="Area 23">Area 23</option>
-									</select>
-								</div>
-							</div>
-						</div>
-
-							<div class="form-group">
-								<textarea name="message" placeholder="Write Your Message Here....."></textarea>
-							</div>
-
-							<div class="button_row">
-								
-								<div class="">
-									<p>( We will be confirm by an Text Message )</p>
-								</div>
-
-								<div class="button">
-									<button type="submit" class="btn">Submit</button>
-								</div>
-							</div>
-						</form>
-					</div>
-
-						<div class="appointment-image">
-						{/* <img src="assets/Home_pub/picture1.png" alt="" /> */}
-						</div>
-				</div>
-			</div>
-		</section>
-		 {/* End Appointment  */}
-		 </>
-
-		 <>
-		 <Footer/>
-		 </>
+      <Footer />
     </div>
-  )
+  );
 }

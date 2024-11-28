@@ -25,28 +25,34 @@ function Header() {
 									<nav class="navigation">
 										<ul class="nav menu">
 
-										<li><Link to='/'>Home</Link> </li>
+											<li><Link to='/'>Home</Link> </li>
 
-										<li class="active"><Link>Services <i class="icofont-rounded-down"></i></Link>
+											<li class="active"><Link>Services <i class="fa-solid fa-angles-down"></i></Link>
+													<ul class="dropdown">
+														<li><Link to='/RentPage'>For Rent</Link></li>
+														<li><Link to='/BuyPages'>For Sell</Link></li>
+														<li><Link to='/SellPage'>Publish here</Link></li>
+													</ul>
+											</li>
+
+											<li>
+												<Link to='/Blog'>Blog</Link>
+											</li>
+																	
+											<li>
+												<Link to='/AboutUs'>About</Link>
+											</li>
+						
+											<li class="active">
+												<Link to='/ContactUs'>Contact Us <i class="fa-solid fa-angles-down"></i>
+												</Link>
+
 												<ul class="dropdown">
-													<li><Link to='/RentPage'>For Rent</Link></li>
-													<li><Link to='/BuyPages'>For Sell</Link></li>
-													<li><Link to='/SellPage'>Publish here</Link></li>
-												</ul>
-										</li>
+													<li><Link to='/LogIn'>Log In</Link></li>
+													<li><Link to='/DashBord'>Test</Link></li>
+													</ul>
+											</li>
 
-										<li>
-											<Link to='/Blog'>Blog</Link>
-										</li>
-																
-										<li>
-											<Link to='/AboutUs'>About</Link>
-										</li>
-										
-					
-										<li>
-											<Link to='/ContactUs'>Contact Us</Link>
-										</li>
 										</ul>
 									</nav>
 								</div>
