@@ -41,6 +41,9 @@
     --red-light : #f8d7da;
     --red-mid : #f7192c;
     --red-dark : #842029;
+    --gree-light: #d1e7dd;
+    --green-mid:#03a359;
+    --green-dark:#0f5132;
 
     /*fonts*/
     --headingFont: 'Roboto', sans-serif;
