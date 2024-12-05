@@ -65,31 +65,31 @@
     --shadow-4: 0 20px 25px  -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.4);
 }
 
-.Post_Section{
-    margin: 50px 260px;
-}
-.Post_Section form{
-    
+.Post_Section fieldset{
+	border: none;
+	border-radius: var(--borderRadius);
+    margin-bottom: 25px;
+    background-color: hsl(270, 50%, 11%);
+	background-image: linear-gradient(120deg, hsla(26, 80%, 50%, .5), 10%, hsl(175, 70%, 13%) 60%), url("./house.png");
+	box-shadow: 0 6px 16px 0 hsla(270, 30%, 3%, .4);
 }
 
-.Post_Section fieldset{
-    margin-bottom: 25px;
-    background: var(--grey-600);
-}
 .Post_Section .Post_form {
-    background: var(--grey-800);
-    margin: 30px 25px;
+	background-color: transparent;
+    margin: 15px 10px;
 	-webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.10);
 	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.10);
-	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.10);
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
 	border-radius: 8px;
-	padding: 30px;
+	margin: 20px 15px;
+	padding: 30px 20px;
 }
 
 .Post_Section label {
 	position: absolute;
-    left: 17%;
-	font-size: 2rem;
+    left: 7%;
+	font-size: 3rem;
+	font-weight: lighter;
 	color: var(--gold-700);
 	margin-bottom: 20px;
 	text-transform: capitalize;
@@ -111,21 +111,21 @@
 }
 .Post_Section .Post_form-group_Pro i {
 	position: absolute;
-	left: 12px;
+	left: 42px;
 	top: 32px;
 	z-index: 1;
 	color: var(--green-dark);
 }
 .Post_Section .Post_form-group i {
 	position: absolute;
-	left: 12px;
+	left: 42px;
 	top: 13px;
 	z-index: 1;
 	color: var(--green-dark);
 }
 
 .Post_Section .Post_form-group_Pro input {
-	width: 100%;
+	width: 90%;
 	height: 40px;
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
@@ -140,7 +140,7 @@
 	color:var(--grey-700);
 }
 .Post_Section .Post_form-group input {
-	width: 100%;
+	width: 90%;
 	height: 40px;
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
@@ -156,7 +156,7 @@
 }
 
 .Post_Section .Post_form-group_Pro select {
-	width: 100%;
+	width: 90%;
 	height: 40px;
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
@@ -172,37 +172,41 @@
 }
 
 .Post_Section .Post_form-group textarea {
-	border: 1px solid #ddd;
-	width: 700px;
+	width: 90%;
+	height: 100px;
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	transition: all 0.4s ease;
-	box-shadow: none;
-	border-radius: 5px;
-	border: none;
-	height: 190px;
-	padding: 15px 15px 15px 35px;
-	resize: none;
 	font-weight: 400;
+	border-radius: 5px;
+	padding-left: 34px;
+	padding-right: 20px;
+	border: none;
+	line-height:50px;
 	font-size:14px;
-	color:#2C2D3F;
+	color:var(--grey-700);
+	margin: 0 5%;
 }
 
 .Post_Section .form_group button{
 	padding: 10px 30px;
-	font-size: 14px;
+	font-size: 16px;
+	font-weight: lighter;
 	text-transform: uppercase;
 	display: block;
 	border: 0px solid;
 	color: var(--white);
-    background: var(--grey-800);
+    background: var(--red-mid);
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	transition: all 0.4s ease;
-	padding: 15px 30px;
+	padding: 10px 20px;
+	border-radius: var(--borderRadius);
 	
 }
 .Post_Section .form_group button:hover {
-    background: var(--green-dark);
+    background: var(--red-light);
+	color: var(--grey-900);
+	font-weight: bold;
 
 }

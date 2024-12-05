@@ -71,7 +71,10 @@ a{
 
 /* Breadcrumbs */
 .breadcrumbs_rental{
-    background: rgba(202, 138, 0, 0.4);
+    background-color: hsl(270, 50%, 11%);
+    background-image: linear-gradient(120deg, hsla(26, 80%, 50%, .5), 10%, hsl(270, 50%, 11%) 60%), url("./snowB.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 40vh; 
     display: flex;
     align-items: center;
@@ -140,7 +143,8 @@ a{
     max-width: calc(26.33% - 20px);
     margin-bottom: 20px;
     padding: 20px;
-    background-color: var(--white);
+    background-color: hsl(270, 50%, 11%);
+    background-image: linear-gradient(120deg, hsla(26, 80%, 50%, .5), 65%, hsl(0, 0%, 100%) 80%), url("./clock.gif");
     border: 1px solid var(--grey-200);
     border-radius: 5px;
     text-align: center;
@@ -193,6 +197,7 @@ a{
     padding: 5px;
     background: var(--black);
     font-size: 20px;
+    border-radius: var(--borderRadius);
 }
 
 .Nofound p{

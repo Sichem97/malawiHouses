@@ -4,10 +4,10 @@ import AboutUs from "./pages/AboutUs";
 import Blog from "./pages/Blog"
 import BuyPages from "./pages/BuyPages"
 import CustomerCare from "./pages/Component/CustomerCare";
+import Comments from "./pages/Component/Comments";
 import ContactUs from "./pages/ContactUs";
 import DashAuthentification from "./pages/Component/DashAuthentification";
 import DashBord from "./pages/Component/DashBord";
-import DashHeader from "./pages/Component/DashHeader";
 import DashHome from "./pages/Component/DashHome";
 import Employee from "./pages/Component/Employee";
 import LogIn from "./pages/LogIn";
@@ -31,10 +31,10 @@ function App() {
         <Route path="/Blog" element={<Blog/>}/>
         <Route path="/BuyPages" element={<BuyPages/>}/>
         <Route path="/ContactUs" element={<ContactUs/>}/>
+        <Route path="/Comments" element={<Comments/>}/>
         <Route path="/CustomerCare" element={<CustomerCare/>}/>
         <Route path="/DashAuthentification" element={<DashAuthentification/>}/>
         <Route path="/DashBord" element={<DashBord/>}/>
-        <Route path="/DashHeader" element={<DashHeader/>}/>
         <Route path="/DashHome" element={<DashHome/>}/>
         <Route path="/Employee" element={<Employee/>}/>
         <Route path="/LogIn" element={<LogIn/>}/>

@@ -33,8 +33,8 @@ export default function LogIn() {
   return (
     <>
       <Header />
-      <section className="hook">
-        <div className="main">
+      <section className="hook2">
+        <div className="main_Log">
           <div className="login">
             <form onSubmit={handleSubmit}>
               <label>Log In</label>

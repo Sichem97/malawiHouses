@@ -12,7 +12,6 @@ const NewsUpCard = ({ name, date, cover, profile , title }) => (
       <div className="NewsUp">
       <h3>{title}</h3>
      <a className="a" href="/Blog">"{date}"</a>
-      <p className="NewsUp-feedback">"{profile}"</p>
     </div>
   </div>
 );
@@ -34,7 +33,8 @@ const NewsUp = () => {
       <h2>Most Recent News.</h2>
       <div class="section-title">
                             <img src="assets/carry2.png" alt="logo_picture"/>
-							<p className="color">Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+							<p id="color">Stay informed with our most recent news, where we bring you the latest updates, insights, and stories that matter most. From industry trends to important announcements, our news section is your go-to source for staying ahead and connected. We strive to keep you informed with accurate and timely information, ensuring you never miss out on what's happening in our world. Explore our recent articles and stay engaged with the topics that shape your interests and decisions.
+</p>
  						</div>
       <Slider {...sliderSettings}>
         {NewsUpData.map((NewsUpData, index) => (

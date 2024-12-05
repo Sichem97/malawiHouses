@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import '../css/Comments.css';
 import '../css/ProdManagement.css';
-import DashHeader from './DashHeader';
+import { useState, useEffect } from 'react';
+import { Link} from 'react-router-dom';
 import initialSoldData from '../Data/SoldData';
 import initialRentalData from '../Data/RentalData';
 
 export default function ProdManagement() {
+  const [user, setUser] = useState({ firstName: 'User' });
   const [activeTab, setActiveTab] = useState('rent');
   const [filter, setFilter] = useState({ category: 'none', district: 'none' });
   const [soldData, setSoldData] = useState([]);
@@ -80,18 +81,176 @@ export default function ProdManagement() {
 
   const filteredData = activeTab === 'rent' ? filterData(rentalData) : filterData(soldData);
 
-  return (
-    <div className='Main_Prod'>
-      <DashHeader />
 
-      <div className='Link_Container'>
-        <Link to="#" onClick={() => setActiveTab('rent')}> For Rent </Link>
-        <Link to="#" onClick={() => setActiveTab('sell')}> For Sell </Link>
+  return (
+    <section className='body'>
+        <div class="dash">
+
+  {/* <!-- BODY --> */}
+  <div class="body">
+
+    {/* <!-- SIDEBAR --> */}
+    <div class="sidebar">
+      <div class="sidebar__icon">
+        <Link to="/DashBord"><i class="fa-solid fa-house"></i></Link>
       </div>
 
-      <div className='Search_Container'>
+      <div class="sidebar__icon">
+        <Link to='/DashAuthentification'><i class="fa-solid fa-users"></i></Link>
+      </div>
+
+      <div class="sidebar__icon">
+        <Link to='/PostProduct'><i class="fa-solid fa-folder-plus"></i></Link>
+      </div>
+
+      <div class="sidebar__icon">
+        <Link to='/ProdManagement'><i class="fa-solid fa-list-check"></i></Link>
+      </div>
+
+      <div class="sidebar__icon">
+      <Link to='/CustomerCare'><i class="fa-solid fa-headset"></i></Link>
+      </div>
+
+      <div class="sidebar__icon">
+        <Link to='/Register'><i class="fa-solid fa-user-plus"></i></Link>
+      </div>
+
+      <div class="sidebar__icon">
+        <Link to="/"><i class="fa-solid fa-right-from-bracket"></i></Link>
+      </div>
+    </div>
+    {/* <!-- END OF SIDEBAR --> */}
+
+    {/* <!-- MAIN --> */}
+    <main class="main">
+
+    {/* <!-- COL-1 --> */}
+    <div class="main__col-1">
+
+      {/* <!-- HEADING --> */}
+      <div>
+        <h2 class="main__heading">
+          <span><i class="fa-solid fa-list-check"></i> </span> Product Management</h2>
+        <p class="main__desc">Welcome</p>
+        <p class="main__sub"><span><i class="fa-solid fa-id-badge"></i></span> <span>{user.firstName}!</span></p>
+      </div>
+
+      {/* <!-- LIST --> */}
+      <div class="main__list-heading-wrap">
+        <h2 class="main__list-heading ss-heading">Recent Activities</h2>
+      </div>
+
+      <ul class="main__list">
+
+        <li class="main__list-item">
+          <div>
+            <p class="main__list-content">Take a clear picture of the ID</p>
+          </div>
+        </li>
+
+        <li class="main__list-item">
+          <div class="main__list-content-wrap">
+            <p class="main__list-content">All different Information form the ID</p>
+            <p class="main__list-sub">Is Rejected</p>
+          </div>
+        </li>
+
+        <li class="main__list-item">
+          <div class="main__list-content-wrap">
+            <p class="main__list-content">A wrong ID number</p>
+            <p class="main__list-sub">Is Rejected</p>
+          </div>
+        </li>
+
+        <li class="main__list-item">
+          <div class="main__list-content-wrap">
+            <p class="main__list-content">An Unvailable or Wrong Phone number</p>
+            <p class="main__list-sub">Is Rejected</p>
+          </div>
+        </li>
+
+        <li class="main__list-item">
+          <div class="main__list-content-wrap">
+            <p class="main__list-content">A wrong Email</p>
+            <p class="main__list-sub">Is Rejected</p>
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+
+    {/* <!-- COL-2 --> */}
+    <div class="main__col-2">
+      {/* <!-- CARDS --> */}
+      <div class="main__cards-container">
+
+        <div class="main__cards-container-heading-wrap">
+          <h2 class="main__cards-container-heading ss-heading">Bord views</h2>
+          <a href="#" class="ss-show">show all</a>
+        </div>
+
+        <ul class="main__cards">
+          <li className="main__card" style={{ "--hue": "25" }}>
+           <Link to="#" onClick={() => setActiveTab('rent')}>
+           <div class="main__card-image-container">
+              <img src="./assets/Special/for_rent.gif" alt="" class="main__card-image"/>
+            </div>
+            <h3 class="main__card-heading">For Rent </h3>
+            {/* <p class="main__card-heading-sub">Requests</p> */}
+            <p class="main__card-heading-type">0</p>
+           </Link>
+          </li>
+
+          <li className="main__card" style={{ "--hue": "250" }}>
+            <Link to="#" onClick={() => setActiveTab('sell')}>
+            <div class="main__card-image-container">
+              <img src="./assets/Special/for_saleA.gif" alt="" class="main__card-image"/>
+            </div>
+            <h3 class="main__card-heading">For Sell</h3>
+            {/* <p class="main__card-heading-sub">Approuved</p> */}
+            <p class="main__card-heading-type"> 0</p>
+            </Link>
+          </li>
+        </ul>
+        
+
+        <div class="main__cards-pagination">
+          <span class="ss-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+
+      </div>
+
+      {/* <!-- CROSSING --> */}
+      <div class="main__crossing-container">
+        <div class="main__crossing-image">
+          <img src="./assets/Special/Houseman.png" alt=""/>
+        </div>
+        <div class="main__crossing-current">
+          <p class="main__crossing-upper">
+          Items Views
+          </p>
+          <h3 class="main__crossing-heading">
+            Management
+          </h3>
+        </div>
+      </div>
+
+      {/* <!-- DISCOVER --> */}
+      <div class="main__discover">
+
+        <div class="main__discover-heading-container">
+          <h3 class="main__discover-heading ss-heading">Items List</h3>
+        </div>
+        
+        <section>
+        <div className='Search_Container'>
         <div>
-          <span className="current">Category </span>
+          <span className="current">Category </span> <br />
           <select name="category" id="Category" onChange={handleFilterChange}>
             <optgroup>
               <option value="none">none</option>
@@ -155,8 +314,6 @@ export default function ProdManagement() {
                   <div>
                     <b>{product.name}</b>
                     <i>MWK : {product.cost}</i>
-                    <p>Location : {product.district}</p>
-                    <i>{product.date}</i>
                   </div>
                   <section>
                     <button onClick={() => handleShowMore(product)}>Info</button>
@@ -179,11 +336,12 @@ export default function ProdManagement() {
               <p>Are you sure you want to delete this item?</p>
             ) : (
               <div className=''>
+                
+                <img src={modalInfo.item.image} alt={modalInfo.item.name} />
                 <p><b>Name:</b> {modalInfo.item.name}</p>
                 <p><b>Cost:</b> MWK {modalInfo.item.cost}</p>
                 <p><b>Location:</b> {modalInfo.item.district}</p>
                 <p><b>Date:</b> {modalInfo.item.date}</p>
-                <img src={modalInfo.item.image} alt={modalInfo.item.name} />
               </div>
             )}
             <button onClick={handleConfirm} className="btn-confirm">confirm</button>
@@ -191,6 +349,20 @@ export default function ProdManagement() {
           </div>
         </div>
       )}
+        </section>
+
+      </div>
+
+      
+
     </div>
+
+  </main>
+
+</div>
+
+</div>
+    </section>
   );
 }
+

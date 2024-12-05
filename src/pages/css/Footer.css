@@ -74,15 +74,16 @@ ul{
 /*=========================
 	Start Footer CSS
 ===========================*/
-.footer{
+/* .footer{
 	align-items: center;
-    background-color: #333;
+	background-color: hsl(270, 50%, 11%);
+
     color: #fff;
     text-align: center;
     position: relative;
     width: 100%;
     bottom: 0px;
-}
+} */
 .row{
   display: flex;
   align-items: center;
@@ -91,7 +92,10 @@ ul{
 .footer .footer-top{
 	padding:5px 0px;
 	position:relative;
-	background:var(--grey-800);
+	background-color: hsl(270, 50%, 11%);
+  	background-image: linear-gradient(120deg, hsla(26, 80%, 50%, .3), 10%, hsl(270, 50%, 11%) 90%), url("./footer\ \(4\).gif");
+	background-repeat: no-repeat;
+	object-fit: fill;
 }
 .footer .footer-top:before{
 	position:absolute;
@@ -134,7 +138,7 @@ letter-spacing: var(--letter-spacing);
 	width: 34px;
 	line-height: 34px;
 	text-align: center;
-	border: 1px solid #fff;
+	border: 1px solid var(--white);
 	text-align: center;
 	padding: 0;
 	border-radius: 100%;
@@ -148,34 +152,16 @@ letter-spacing: var(--letter-spacing);
 	border-color:transparent;
 }
 .footer .single-footer .social li a i{
-	
+	 /* font-size: 22px;  */
 }
-.footer .single-footer.f-link li a i{
-	margin-right:10px;
-}
-.footer .single-footer.f-link li{
-	display:block;
-	margin-bottom:12px;
-}
-.footer .single-footer.f-link li:last-child{
-	margin:0;
-}
-.footer .single-footer.f-link li a {
-	display: block;
-	color: #fff;
-	text-transform: capitalize;
-	-webkit-transition: all 0.4s ease;
-	-moz-transition: all 0.4s ease;
-	transition: all 0.4s ease;
-	font-weight: 400;
-}
-.footer .single-footer.f-link li a:hover{
-	padding-left:8px;
+.single-footer .social img{
+	width: 34px;
+	height: 34px;
 }
 .footer .single-footer h2{
-	color:#fff;
-	font-size:20px;
-	font-weight:600;
+	color:var(--grey-200);
+	font-size:16px;
+	font-weight:lighter;
 	text-transform:capitalize;
 	margin-bottom:40px;
 	padding-bottom:20px;
@@ -189,7 +175,7 @@ letter-spacing: var(--letter-spacing);
 	bottom: 0px;
 	height: 3px;
 	width: 50px;
-	background: #fff;
+	background: var(--gold-900);
 }
 .footer .single-footer .time-sidual{
 	margin-top:15px;
@@ -199,7 +185,7 @@ letter-spacing: var(--letter-spacing);
 }
 .footer .single-footer .time-sidual li {
 	display: block;
-	color: #fff;
+	color: var(--white);
 	width: 100%;
 	margin-bottom: 5px;
 }
@@ -207,96 +193,24 @@ letter-spacing: var(--letter-spacing);
 	display:inline-block;
 	float:right;
 }
-.footer .single-footer .day-head .time {
-	font-weight: 400;
-	float: right;
-}
 .footer .single-footer p{
-	color:#fff;
-}
-.footer .single-footer .newsletter-inner{
-	margin-top:20px;
-	position:relative;
-}
-.footer .single-footer .newsletter-inner input {
-	background: transparent;
-	border: 1px solid #fff;
-	height: 50px;
-	line-height: 42px;
-	width: 100%;
-	margin-right: 15px;
-	color: #fff;
-	padding-left: 18px;
-	padding-right: 70px;
-	display: inline-block;
-	float: left;
-	border-radius: 0px;
-	-webkit-transition: all 0.4s ease;
-	-moz-transition: all 0.4s ease;
-	transition: all 0.4s ease;
-	font-weight: 400;
-	border-radius: 5px;
-}
-.footer .single-footer .newsletter-inner input:hover{
-	padding-left: 22px;
-}
-.footer input::-webkit-input-placeholder {
-    opacity: 1;
-    color: #fff !important;
-}
-
-.footer input::-moz-placeholder {
-    opacity: 1;
-    color: #fff !important;
-}
-
-.footer input::-ms-input-placeholder {
-    opacity: 1;
-    color: #fff !important;
+	color:var(--white);
 }
 .footer input::input-placeholder {
     opacity: 1;
-    color: #fff !important;
-}
-.footer .single-footer .newsletter-inner .button {
-	position: absolute;
-	right: 0;
-	top: 0;
-	height: 50px;
-	line-height: 50px;
-	width: 50px;
-	background: #fff;
-	border-left: 1px solid #fff;
-	text-shadow: none;
-	box-shadow: none;
-	display: inline-block;
-	border-radius: 0px;
-	border: none;
-	-webkit-transition: all 0.4s ease;
-	-moz-transition: all 0.4s ease;
-	transition: all 0.4s ease;
-	border-radius: 0 5px 5px 0;
-	color: #1A76D1;
-	font-size: 25px;
-}
-.footer .single-footer .newsletter-inner .button i{
-	-webkit-transition:all 0.4s ease;
-	-moz-transition:all 0.4s ease;
-	transition:all 0.4s ease;
-}
-.footer .single-footer .newsletter-inner .button:hover i{
-	color:#2C2D3F;
+    color: var(--white) !important;
 }
 .footer .copyright{
-	background:var(--grey-700);
+	background-color: hsl(269, 49%, 17%);
+
 	padding:25px 0px 25px 0px;
 	text-align:center;
 }
 .footer .copyright .copyright-content p{
-	color:#fff;
+	color:var(--grey-200);
 }
 .footer .copyright .copyright-content p a{
-	color:#fff;
+	color:var(--white);
 	font-weight:400;
 	text-decoration:underline;
 	display:inline-block;

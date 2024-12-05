@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import '../css/Comments.css';
+import { useState } from 'react';
+import { Link} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import DashHeader from './DashHeader';
-import '../css/PostProduct.css';
+
 
 export default function Register() {
+  const [user, setUser] = useState({ firstName: 'User' });
   const [formData, setFormData] = useState({
     idPicture: '',
     firstName: '',
@@ -85,15 +87,136 @@ export default function Register() {
     setTimeout(() => navigate('/DashBord'), 1500);
   };
 
+
   return (
-    <div>
-      <DashHeader />
-      <section className="hook">
+    <section className='body'>
+        <div class="dash">
+
+  {/* <!-- BODY --> */}
+  <div class="body">
+
+    {/* <!-- SIDEBAR --> */}
+    <div class="sidebar">
+      <div class="sidebar__icon">
+        <Link to="/DashBord"><i class="fa-solid fa-house"></i></Link>
+      </div>
+
+      <div class="sidebar__icon">
+        <Link to='/DashAuthentification'><i class="fa-solid fa-users"></i></Link>
+      </div>
+
+      <div class="sidebar__icon">
+        <Link to='/PostProduct'><i class="fa-solid fa-folder-plus"></i></Link>
+      </div>
+
+      <div class="sidebar__icon">
+        <Link to='/ProdManagement'><i class="fa-solid fa-list-check"></i></Link>
+      </div>
+
+      <div class="sidebar__icon">
+      <Link to='/CustomerCare'><i class="fa-solid fa-headset"></i></Link>
+      </div>
+
+      <div class="sidebar__icon">
+        <Link to='/Register'><i class="fa-solid fa-user-plus"></i></Link>
+      </div>
+
+      <div class="sidebar__icon">
+        <Link to="/"><i class="fa-solid fa-right-from-bracket"></i></Link>
+      </div>
+    </div>
+    {/* <!-- END OF SIDEBAR --> */}
+
+    {/* <!-- MAIN --> */}
+    <main class="main">
+
+    {/* <!-- COL-1 --> */}
+    <div class="main__col-1">
+
+      {/* <!-- HEADING --> */}
+      <div>
+        <h2 class="main__heading">
+          <span><i class="fa-solid fa-user-plus"></i> </span> Registration</h2>
+        <p class="main__desc">Welcome</p>
+        <p class="main__sub"><span><i class="fa-solid fa-id-badge"></i></span> <span>{user.firstName}!</span></p>
+      </div>
+
+      {/* <!-- LIST --> */}
+      <div class="main__list-heading-wrap">
+        <h2 class="main__list-heading ss-heading">Requirements</h2>
+      </div>
+
+      <ul class="main__list">
+
+        <li class="main__list-item">
+          <div>
+            <p class="main__list-content">Take a clear picture of the ID</p>
+          </div>
+        </li>
+
+        <li class="main__list-item">
+          <div class="main__list-content-wrap">
+            <p class="main__list-content">All different Information form the ID</p>
+            <p class="main__list-sub">Is Rejected</p>
+          </div>
+        </li>
+
+        <li class="main__list-item">
+          <div class="main__list-content-wrap">
+            <p class="main__list-content">A wrong ID number</p>
+            <p class="main__list-sub">Is Rejected</p>
+          </div>
+        </li>
+
+        <li class="main__list-item">
+          <div class="main__list-content-wrap">
+            <p class="main__list-content">An Unvailable or Wrong Phone number</p>
+            <p class="main__list-sub">Is Rejected</p>
+          </div>
+        </li>
+
+        <li class="main__list-item">
+          <div class="main__list-content-wrap">
+            <p class="main__list-content">A wrong Email</p>
+            <p class="main__list-sub">Is Rejected</p>
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+
+    {/* <!-- COL-2 --> */}
+    <div class="main__col-2">
+
+      {/* <!-- CROSSING --> */}
+      <div class="main__crossing-container">
+        <div class="main__crossing-image">
+          <img src="./assets/Special/Houseman.png" alt=""/>
+        </div>
+        <div class="main__crossing-current">
+          <p class="main__crossing-upper">
+          Registration
+          </p>
+          <h3 class="main__crossing-heading">
+            Form
+          </h3>
+        </div>
+      </div>
+
+      {/* <!-- DISCOVER --> */}
+      <div class="main__discover">
+
+        <div class="main__discover-heading-container">
+          <h3 class="main__discover-heading ss-heading"><label>Sign up</label></h3>
+        </div>
+        
+        <section className="hook">
         <div className="Regmain">
           <input type="checkbox" id="chk" aria-hidden="true" />
           <div className="signup">
             <form onSubmit={handleSubmit}>
-              <label>Sign up</label>
+              
 
               {message && <div className="alertB"><p>{message}</p></div>}
 
@@ -133,6 +256,19 @@ export default function Register() {
           </div>
         </div>
       </section>
+
+      </div>
+
+      
+
     </div>
+
+  </main>
+
+</div>
+
+</div>
+    </section>
   );
 }
+

@@ -7,8 +7,9 @@ import { Link } from 'react-router-dom';
 const AboutUs = () => {
     const teamMembers = [
         { name: 'Sichem M.', role: 'CEO & Founder', image: '/assets/Profile/profile2.png' },
-        { name: 'Yotcheb K.', role: 'Chief Technology Officer', image: '/assets/Profile/profile3.png' },
+        { name: 'Memory N.', role: 'Head of Marketing', image: '/assets/Profile/profile4.png' },
         { name: 'Priscilla', role: 'Head of Marketing', image: '/assets/Profile/profile1.png' },
+        { name: 'Yotcheb K.', role: 'Chief Technology Officer', image: '/assets/Profile/profile3.png' },
     ];
 
     return (
@@ -33,7 +34,7 @@ const AboutUs = () => {
                 <div className="intro">
                     <div className='intro-info'>
                         <h2>We Deliver Happiness</h2>
-                        <p>Welcome to our platform, your one-stop solution for all real estate needs in Malawi. Whether you're looking to buy, sell, or rent properties, we've got you covered. Our services extend beyond just transactions; we also offer property insurance, management, relocation, renovation, and maintenance. Our mission is to make your real estate journey seamless and enjoyable.</p>
+                        <p>Welcome to Malawi Houses, your one-stop solution for all real estate needs in Malawi. Whether you're looking to buy, sell, or rent properties, we've got you covered. Our services extend beyond just transactions; we also offer property insurance, management, relocation, renovation, and maintenance. Our mission is to make your real estate journey seamless and enjoyable.</p>
                     </div>
                 </div>
 
@@ -67,18 +68,20 @@ const AboutUs = () => {
                 </section>
 
                 <section className="contact">
-                    <h2>Contact Us</h2>
-                    <p id='p'>If you have any questions or inquiries, feel free to reach out to us. Our team is here to assist you and ensure your experience with our services is exceptional.</p>
-                    <p id='p'>Email: <a href="mailto:info@malawihouse.com">info@malawihouse.com</a></p>
-                    <p id='p'>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+                    <div>
+                        <h2>Contact Us</h2>
+                        <p id='p'>If you have any questions or inquiries, feel free to reach out to us. Our team is here to assist you and ensure your experience with our services is exceptional.</p>
+                        <p id='p'>Email: <a href="mailto:info@malawihouse.com">info@malawihouse.com</a></p>
+                        <p id='p'>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+                    </div>
                 </section>
 
                 <section className="partners">
                     <h2>In Partnership with</h2>
                     <div className="partner-logos">
-                        <img src="/assets/house-1867187_1280.jpg" alt="Partner 1" />
-                        <img src="/assets/house-1867187_1280.jpg" alt="Partner 2" />
-                        <img src="/assets/house-1867187_1280.jpg" alt="Partner 3" />
+                        <img src="/assets/Special/QmarkA.png" alt="Partner 1" />
+                        <img src="/assets/Special/QmarkA.png" alt="Partner 2" />
+                        <img src="/assets/Special/QmarkA.png" alt="Partner 3" />
                     </div>
                 </section>
             </div>

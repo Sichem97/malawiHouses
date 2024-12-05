@@ -66,77 +66,72 @@
     --shadow-4: 0 20px 25px  -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.4);
 }
 
-.Main_Prod{
-    color: var(--grey-900);
-    background: rgba(255, 255, 255, 0.6);
-
-}
-.Main_Prod .Link_Container{
-    background: var(--black);
-    display: flex;
-    align-items: center ;
-    justify-content: space-around;
-    padding: 10px 30px ;
-}
-.Link_Container a{
-    color: var(--white);
-}
-.Link_Container a:hover{
-    border-radius: 50px 0 50px 0;
-    color: var(--black);
-    background: var(--gold-900);
-    transition: 0.2s;
-}
 .Search_Container{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: var(--grey-500);
+    background-color: hsl(270, 50%, 11%);
+    background-image: linear-gradient(120deg, hsla(26, 80%, 50%, .5), 70%, hsl(272, 50%, 11%) 90%), url("./snow.gif");
+    border-radius: var(--borderRadius);
 }
 .Search_Container div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    text-align: center;
 }
 .Search_Container span{
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: bolder;
+    letter-spacing: var(--letter-spacing);
 }
 .Search_Container select{
-    font-size: 20px;
+    /* font-size: 20px; */
     width: 100%;
     height: 100%;
     padding-left: 30px;
 }
+
 .Item_Container{
     margin: 5px 10%;
 }
-.Box_Container{
 
-}
 .Box_Container .Box_Item{
     display: block;
 }
 
 .Box_Container .Box_Item .Box_Items{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: var(--grey-500);
-    margin: 5px 0;
+    display: inline-block;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 25px;
+    width: 47%;
+    min-height: 30vh;
+    background-color: hsl(270, 50%, 11%);
+    background-image: linear-gradient(120deg, hsla(26, 80%, 50%, .5), 65%, hsl(270, 50%, 11%) 80%), url("./mouse.gif");
+    background-size: cover;
+	border: 1px solid var(--primary-200);
+	border-radius: 8px;
+	padding: 10px;
+	margin: 7px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .Box_Container .Box_Item .Box_Items img{
-    width: 200px;
-    height: 150px;
+    width: 100%;
+    height: 20vh;
 }
 .Box_Items div{
+    font-weight: lighter;
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
+
+.Box_Items section{
+    text-align: center;
+}
+
 .Box_Items section button{
     font-size: 18px;
     margin: 10px 3px;
     padding: 10px 15px;
-    border-radius: 50px;
+    border-radius: var(--borderRadius);
     border: none;
     background-color: var(--green-mid);
     color: var(--white);
@@ -146,26 +141,26 @@
     font-size: 18px;
     margin: 10px 3px;
     padding: 10px 15px;
-    border-radius: 50px;
+    border-radius: var(--borderRadius);
     border: none;
     background-color: var(--red-mid);
     color: var(--white);
 }
 
 .Box_Items div b{
-    font-size: 20px;
-    font-weight: 800;
+    /* font-size: 20px; */
+    font-weight: 600;
     letter-spacing: 2px;
     padding: 2px 0;
 }
 .Box_Items div i{
-    font-size: 18px;
+    /* font-size: 18px; */
     font-weight: bolder;
     letter-spacing: var(--letter-spacing);
     color: var(--white);
-    background: var(--black);
+    background: var(--grey-600);
     border-radius: var(--borderRadius);
-    padding: 2px 0;
+    padding: 4px 0;
 }
 .Box_Items div p{
     font-size: 16px;
@@ -183,9 +178,11 @@
 
 
 .Cation_Container{
-    background: rgba(0,0,0,0.4);
-    padding: 0 50px;
-    margin: 0 50px;
+    background-color: hsl(270, 50%, 11%);
+    background-image: linear-gradient(120deg, hsla(26, 80%, 50%, .7), 10%, hsl(270, 50%, 11%) 60%);
+    border-radius: 5px;
+    padding: 20px 50px;
+    margin: 0 5px;
 }
 .Cation_Container h2{
     font-size: 2rem;
@@ -199,7 +196,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: rgba(0,0,0,0.6);
+    background: transparent;
 }
 
 .Cation_Container .employee_card div{
@@ -207,8 +204,8 @@
 }
 
 .Cation_Container .employee_card div li{
-    font-size: 18px;
-    margin: 2px;
+    font-weight: lighter;
+    letter-spacing: var(--letter-spacing);
 }
 
 .Cation_Container .employee_card div span{
@@ -222,18 +219,12 @@
 
 .Cation_Container .employee_card div button{
     color: var(--white);
-    background: rgba(0,0,0,0.6);
+    background: rgba(255, 26, 26, 0.6);
     margin-left: 5px;
     padding: 5px 10px;
     border: none;
     border-radius: var(--borderRadius);
     font-size: 15px;
-}
-
-.Cation_Container .employee_card div button:hover{
-    background: rgba(255, 26, 26, 0.6);
-    color: var(--white);
-    transition: 0.3s;
 }
 
 /* -------------------- */
@@ -245,58 +236,49 @@
 /* DashAuthentification */
 /* -------------------- */
 .request_card{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.request_card div img{
-    width: 500px;
-    height: 300px;
-}
-.Cation_Container .request_card{
     padding: 5px 0;
     margin: 5px 0;
+    display: block;
+    
+}
+.request_card div img{
+    width: 100%;
+    height: 40vh;
+    border-radius: 10px;
+}
+.Cation_Container .request_card .request_card_detail{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    background: rgba(0,0,0,0.6);
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: hsl(270, 50%, 11%);
+    background-image: linear-gradient(120deg, hsla(26, 80%, 50%, .0), 10%, hsl(270, 50%, 11%) 60%), url("./card.png");
 }
 
 .Cation_Container .request_card div p{
-    font-size: 18px;
-    margin: 2px;
+    font-weight: lighter;
+    letter-spacing: var(--letter-spacing);
+    margin-left: 50px;
 }
 
 .Cation_Container .request_card .confirm button{
     color: var(--white);
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 212, 18, 0.6);
     margin-left: 5px;
     padding: 5px 10px;
     border: none;
     border-radius: var(--borderRadius);
     font-size: 15px;
-}
-
-.Cation_Container .request_card .confirm button:hover{
-    background: rgba(0, 212, 18, 0.6);
-    color: var(--white);
-    transition: 0.3s;
 }
 
 .Cation_Container .request_card .declin button{
     color: var(--white);
-    background: rgba(0,0,0,0.6);
+    background: rgba(255, 26, 26, 0.6);
     margin-left: 5px;
     padding: 5px 10px;
     border: none;
     border-radius: var(--borderRadius);
     font-size: 15px;
-}
-
-.Cation_Container .request_card .declin button:hover{
-    background: rgba(255, 26, 26, 0.6);
-    color: var(--white);
-    transition: 0.3s;
 }
 
 

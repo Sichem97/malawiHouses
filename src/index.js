@@ -4,7 +4,6 @@ import App from './App';
 import './pages/css/main.css'
 import {BrowserRouter} from 'react-router-dom'
 import { RentalProvider } from './pages/RentalProvider';
-import { MaterialUIControllerProvider } from "./DashBord/context";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,9 +12,7 @@ root.render(
     
       <BrowserRouter>
         <RentalProvider>
-          <MaterialUIControllerProvider>
             <App />
-          </MaterialUIControllerProvider>
         </RentalProvider>
       </BrowserRouter>
     

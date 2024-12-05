@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import RentalData from '../Data/RentalData';
-// import Header from '../Header';
-// import Footer from '../Footer';
 import '../css/ProductDetail.css';
 
 export default function ProductDetailRent() {

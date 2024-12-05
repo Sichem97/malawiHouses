@@ -1,10 +1,12 @@
 import React from 'react'
 import '../css/Offert.css'
+// import "../css/Single.css"
 
 import { Link } from 'react-router-dom'
 
 export default function ServiceOffert() {
   return (
+    
     <div>
         <>
           <section class="Feautes section">
@@ -13,7 +15,8 @@ export default function ServiceOffert() {
               <div class="section-title">
                 <h2>We Are Always Ready to Assist You</h2>
                 <img src="assets/carry2.png" alt="logo_picture"/>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+                <p id='ps'>We pride ourselves on being your trusted partner, always ready to provide the support and assistance you need. Whether you have a question, require guidance, or need a quick solution, our dedicated team is here to help. With a commitment to responsiveness, professionalism, and genuine care, we ensure that your concerns are addressed promptly and effectively. Count on us to be by your side, delivering reliable service whenever you need it most. Your satisfaction and peace of mind are our top priorities.
+</p>
             </div>
           </div>
           <div class="row">
@@ -25,7 +28,7 @@ export default function ServiceOffert() {
                   </div>
                   <h3>Rent</h3>
                   </Link>
-                  <p>Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam vulputate.</p>
+                  <p id='ps'>Explore our amazing rental options for all your needs.</p>
                 </div>
                 {/* End Single features  */}
                 {/* Start Single features  */}
@@ -36,7 +39,7 @@ export default function ServiceOffert() {
                   </div>
                   <h3>Buy</h3>
                   </Link>
-                  <p>Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam vulputate.</p>
+                  <p id="ps">Find your dream property with our exclusive offers.</p>
                 </div>
                 {/* End Single features  */}
                 {/* Start Single features  */}
@@ -47,7 +50,7 @@ export default function ServiceOffert() {
                   </div>
                   <h3>Sell</h3>
                   </Link>
-                  <p>Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam vulputate.</p>
+                  <p id="ps">Sell your property easily and quickly with our service.</p>
                 </div>
                 {/* End Single features  */}
           </div>
@@ -73,8 +76,8 @@ export default function ServiceOffert() {
                       We Provide <span>Professional</span> <br/>
                       House Services.
                     </h2>
-                    <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, corrupti. Ratione sequi unde maxime fuga eveniet at rem totam vel, sint vero quas quo in quibusdam ad optio voluptatem magnam temporibus nesciunt. Veniam perferendis in aspernatur, vero quasi deleniti sint recusandae voluptatum tempore incidunt adipisci accusamus quidem, nam soluta maxime facere repellat, hic voluptates quaerat voluptatem obcaecati dolores temporibus. Ipsa illum fugiat ex itaque corporis, laborum blanditiis praesentium reiciendis corrupti amet culpa officia aliquam nisi magni sit, iusto beatae molestiae soluta neque non architecto labore maxime. Magnam vel quaerat nobis?
+                    <p id='ps'>
+                    We specialize in providing top-tier professional house services designed to meet and exceed your expectations. From comprehensive property maintenance and meticulous cleaning to expert repairs and organizational solutions, our team is committed to delivering unparalleled quality and attention to detail. With a focus on reliability, efficiency, and customer satisfaction, we ensure your home is impeccably maintained and functions seamlessly. Trust us to uphold the highest standards of professionalism, making your home a space of comfort and excellence.
                     </p>
                     <ul className="services" id='#servicesRen'>
                       <li><a href="#servicesRen">Insurance</a></li>
@@ -100,7 +103,7 @@ export default function ServiceOffert() {
 						<div class="section-title">
 							<h2>We Offer Different Services To <br /> Improve Your Happiness</h2>
 							<img src="assets/carry2.png" alt="logo2_picture"/>
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+							<p id='ps'>At our core, we are dedicated to enhancing your happiness through a diverse range of services tailored to meet your needs. Whether it's creating a comfortable and inviting living space, offering expert support, or delivering solutions that simplify your daily life, our goal is to bring convenience and joy to every interaction. With a focus on quality, reliability, and personalized care, we aim to improve your overall well-being and ensure your satisfaction at every step. Experience the difference of services designed to elevate your happiness.</p>
 						</div>
 				</div>
 

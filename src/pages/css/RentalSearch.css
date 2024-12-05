@@ -78,18 +78,21 @@ a{
 
 .Rental_title h1{
     text-transform: uppercase;
-    background: var(--grey-200);
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: rgba(0,0,0,0.1);
 }
 
 .Rental_option{
     display: grid;
     gap: 25px; 
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    background: var(--grey-400);
+    background: linear-gradient(to right top, hsla(270, 50%, 8%, .5), hsla(270, 50%, 8%, .6) 20%, hsla(270, 50%, 8%, .1)), linear-gradient(to right bottom, hsl(270, 50%, 8%), transparent 66%), linear-gradient(to bottom, transparent, hsl(270, 50%, 8%) 56%), url("./house.png") no-repeat;
     padding: 5px;
 }
 .Rental_option span{
     font-size: 16px;
+    color: var(--grey-200);
 }
 .Rental_option select{
     font-size: 18px;

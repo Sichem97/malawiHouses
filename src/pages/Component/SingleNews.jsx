@@ -4,7 +4,7 @@ import NewsPost from './NewsPost';
 import CommentsSection from './CommentsSection';
 import '../css/SingleNews.css'
 
-
+ 
 function SingleNews() {
   const [posts, setPosts] = useState([]);
   const [currentPostIndex, setCurrentPostIndex] = useState(0);
@@ -54,7 +54,7 @@ function SingleNews() {
       <section className="news-single_section">
         <div className="news-single_container">
           <div className="news-single_row">
-            <div className="container_row">
+            <div className="container_row_blog">
               {posts.length > 0 && (
 
                 <>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../css/SoldSearch.css';
+import '../css/RentalSearch.css';
 
 export default function SoldSearch({ onFilterChange }) {
   const [category, setCategory] = useState('none');
@@ -48,12 +48,12 @@ export default function SoldSearch({ onFilterChange }) {
   };
 
   return (
-    <div className="Sold_search"> 
-      <div className="Sold_title">
+    <div className="Rental_search"> 
+      <div className="Rental_title">
         <h1>Search by</h1>
       </div>
 
-      <div className='Sold_option'>
+      <div className='Rental_option'>
         <div>
          <span className="current">Category : </span>
             <select name="category" id="Category" value={category} onChange={handleCategoryChange}>

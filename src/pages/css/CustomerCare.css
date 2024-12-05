@@ -67,93 +67,25 @@
 
 /*===================
     CustomerCare 
-====================*/
-
-.Main_Prod {
-	padding: 20px;
-  }
-  
-  .Care_header {
-	background-color: rgba(255, 255, 255, 0.6);
-	position: relative;
-  }
-  
-  .Care_header-inner {
-	background: var(--black);
-	z-index: 999;
-	width: 100%;
-  }
-  
-  .Care_header .nav li {
-	margin-right: 15px;
-	float: left;
-	position: relative;
-  }
-  
-  .Care_header .nav li a {
-	color: #2C2D3F;
-	font-size: 15px;
-	font-weight: 500;
-	text-transform: capitalize;
-	padding: 25px 12px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-  }
-  
-  .Care_header .nav li a::before {
-	position: absolute;
-	content: "";
-	left: 0;
-	bottom: 0;
-	height: 3px;
-	width: 0%;
-	background: var(--gold-600);
-	border-radius: 5px 5px 0 0;
-	opacity: 0;
-	visibility: hidden;
-	transition: all 0.4s ease;
-  }
-  
-  .Care_header .nav li.active a:before {
-	opacity: 1;
-	visibility: visible;
-	width: 100%;
-  }
-  
-  .Care_header .nav li.active a {
-	color: var(--gold-600);
-  }
-  
-  .Care_header .nav li:hover a:before {
-	opacity: 1;
-	width: 100%;
-	visibility: visible;
-  }
-  
-  .Care_header .nav li:hover a {
-	color: var(--green-mid);
-	transition: 0.4s;
-  }
-  
+====================*/  
   .applications {
 	margin: 20px 50px;
-
   }
   
   .applications h2 {
 	margin-bottom: 10px;
 	font-size: 2rem;
-	color: #343a40;
+  font-weight: lighter;
+	color: var(--gold-200);
   }
   
   .card-container {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
   }
   
   .application_card {
-	background-color: var(--white);
+  background: linear-gradient(to right top, hsla(270, 7%, 68%, 0.5), hsla(299, 78%, 67%, 0.5) 20%, hsla(214, 98%, 49%, 0.3)), linear-gradient(to right bottom, hsl(29, 98%, 54%), transparent 66%), linear-gradient(to bottom, transparent, hsl(214, 98%, 49%) 56%), url("./house.png") no-repeat;
 	border: 1px solid var(--primary-200);
 	border-radius: 8px;
 	padding: 20px;
@@ -163,17 +95,20 @@
   
   .application_card h3 {
 	margin-top: 0;
-	font-size: 20px;
-	color: #343a40;
+  font-weight: lighter;
+	font-size: 2rem;
+	color: var(--green-dark);
   }
   
   .application_card p {
 	margin: 5px 0;
-	color: #495057;
+  font-weight: lighter;
+  letter-spacing: var(--letter-spacing);
+	color: var(--grey-300);
   }
   
   .application_card p strong {
-	color: #212529;
+	color: var(--grey-800);
   }
   
   .application_card .text-xl {
@@ -189,7 +124,7 @@
   }
   
   .border {
-	border: 1px solid #dee2e6;
+	border: 1px solid var(--gold-400);
   }
   
   .rounded-lg {

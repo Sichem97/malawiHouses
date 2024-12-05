@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SoldSearch from './SoldSearch';
-import Footer from '../Footer';
-import Header from '../Header';
 import '../css/ProductDetail.css';
 
 export default function Sold() {
@@ -107,37 +105,35 @@ export default function Sold() {
 
   return (
     <>
-      <Header />
-
       <SoldSearch onFilterChange={handleFilterChange} />
 
-      <div className="product-grid_sold">
+      <div className="product-grid_rental">
         {filteredData.length > 0 ? (
           filteredData.map((value, index) => (
             <div key={index}>
-              <div className="category-title_sold">
+              <div className="category-title_rental">
                 <h1>{value.category}</h1>
               </div>
-              <div className="product-list_sold">
+              <div className="product-list_rental">
                 {value.houses.map((house, houseIndex) => (
                   <div
-                    className="product-card_sold"
+                    className="product-card_rental"
                     key={houseIndex}
                     onClick={() => handleProductClick(index, houseIndex)}
                     style={{ cursor: 'pointer' }}
                   >
                     <img
-                      className="product-image_sold"
+                      className="product-image_rental"
                       src={house.image}
                       alt={house.name}
                       onError={(e) => { e.target.src = '/path/to/default/image.jpg'; }}
                     />
-                    <div className="product-title_sold">{house.name}</div>
-                    <div className="product-description_sold">
+                    <div className="product-title_rental">{house.name}</div>
+                    <div className="product-description_rental">
                       <span>{house.description}</span> <br />
                       <b>{house.district} <br />{house.area}</b>
                     </div>
-                    <div className="product-cost_sold">MW {house.cost}</div>
+                    <div className="product-cost_rental">MW {house.cost}</div>
                   </div>
                 ))}
               </div>
@@ -194,15 +190,16 @@ export default function Sold() {
                     required
                   />    
                   <div className="confirm">
-                  <button type="submit" id='apply'>Apply Now</button>
-                  <button type="button" id='cancel' onClick={handleCancel} className="btn-cancel">Cancel</button>
+                  <button type="submit" className='apply'>Apply</button>
+                  <button type="button" className='cancel' onClick={handleCancel}>Cancel</button>
                 </div> 
                 </section>
 
                 <div className="detail">
-                  <span>{selectedProduct.description}</span>
-                  <span>District : {selectedProduct.district}</span>
-                  <span>Amount : mwk {selectedProduct.cost}  </span>   
+                  <p>Desciption : {selectedProduct.description}</p>
+                  <p>District : {selectedProduct.district}</p>
+                  <p>Amount : mwk {selectedProduct.cost}  </p> 
+                  <p>Other Details : {selectedProduct.detail}</p>  
               </div> 
               </form>
             
@@ -211,8 +208,6 @@ export default function Sold() {
           </div>
         </>
       )}
-
-      <Footer />
     </>
   );
 }

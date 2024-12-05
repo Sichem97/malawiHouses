@@ -9,10 +9,13 @@ margin: 0;
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Montserrat&display=swap');
 html{
-    font-size: 100%;
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 55%;
+	font-weight: lighter;
+
 }
 
-:root{
+:root{ 
     /*colors*/
     --primary-100 : #e2e0ff;
     --primary-200 : #c1beff;

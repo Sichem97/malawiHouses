@@ -73,7 +73,10 @@ a {
 
 /* Breadcrumbs */
 .breadcrumbs_About {
-    background: rgba(202, 138, 0, 0.4);
+    background-color: hsl(270, 50%, 11%);
+    background-image: linear-gradient(120deg, hsla(26, 80%, 50%, .5), 10%, hsl(270, 50%, 11%) 60%), url("./snowB.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 40vh; 
     display: flex;
     align-items: center;
@@ -106,10 +109,12 @@ a {
 /* About Us Page */
 .about-us {
     padding: 2% 20px;
+    
 }
 
 .about-us h2 {
     font-size: 2rem;
+    font-weight: lighter;
     color: var(--grey-800);
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -119,11 +124,12 @@ a {
 }
 
 .about-us p {
-    font-size: 1rem;
+    font-size: 15px;
     line-height: 1.6;
     color: var(--black);
     max-width: 800px;
     margin: 0 auto;
+    
 }
 
 /* Intro Section */
@@ -142,18 +148,18 @@ a {
 
 .intro h2 {
     font-size: 2.8rem;
-    color: #333;
+    color: var(--grey-800);
     margin-bottom: 20px;
     font-weight: 700;
     font-family: sans-serif;
 }
 
 .intro p {
-    font-size: 1.1rem;
+    font-size: 17px;
     color: var(--black);
     margin-bottom: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: justify
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center
 }
 
 /* Mission & Vision Section */
@@ -168,11 +174,15 @@ a {
     text-align: center;
     transition: transform 0.4s ease, box-shadow 0.3s;
     animation: slideUp 0.5s ease;
-    background: var(--grey-500);
+    background-color: hsl(270, 50%, 11%);
+    background-image: linear-gradient(120deg, hsla(26, 80%, 50%, .5), 60%, hsl(193, 50%, 11%) 70%), url("");
+    box-shadow: 0 6px 16px 0 hsla(270, 30%, 3%, .4);
+    border-radius: 8px;
+    padding: 2rem 3.6rem;
 }
 
 .mission-vision div {
-    background: var(--grey-100);
+    background: rgba(255, 255, 255, .1);
     padding: 20px;
     border-radius: var(--borderRadius);
     box-shadow: var(--shadow-2);
@@ -184,27 +194,41 @@ a {
     box-shadow: var(--shadow-3);
 }
 
+.mission-vision p{
+    padding: 20px;
+    color: var(--grey-200);
+    letter-spacing: var(--letter-spacing);
+}
+
+.mission-vision h2{
+    color: var(--grey-200);
+
+}
+
 /* Values Section */
 .values {
-    padding: 60px 40px;
+    padding: 6px 40px;
     border-radius: 20px;
-    margin-bottom: 40px;
+    margin-top: 5%;
+    /* margin-bottom: 2px; */
     text-align: center;
     animation: fadeIn 0.8s ease-in-out;
 }
 
 .values h2 {
-    font-size: 2rem;
-    color: var(--grey-900);
+    font-size: 2.8rem;
+    color: var(--grey-800);
     margin-bottom: 20px;
+    font-weight: 700;
+    font-family: sans-serif;
 }
 
 .values p {
-    font-size: 1rem;
-    color: var(--grey-700);
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: justify;
+    font-size: 17px;
+    color: var(--black);
+    /* margin-bottom: 5px; */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center
 }
 
 /* Team Section */
@@ -217,9 +241,11 @@ a {
 }
 
 .team h2 {
-    font-size: 2rem;
-    color: var(--grey-900);
-    margin-bottom: 20px;
+    font-size: 2.8rem;
+    color: var(--grey-800);
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-family: sans-serif;
 }
 
 .team-members {
@@ -270,16 +296,33 @@ a {
 
 /* Contact Section */
 .contact {
-    background: var(--grey-500);
-    padding: 60px 40px;
+    background-color: hsl(270, 50%, 11%);
+    background-image: linear-gradient(120deg, hsla(26, 80%, 50%, .5), 60%, hsl(193, 50%, 11%) 70%), url("");
+    box-shadow: 0 6px 16px 0 hsla(270, 30%, 3%, .4);
+    border-radius: 8px;
+    padding: 20px 40px;
     border-radius: 20px;
     margin-bottom: 40px;
     text-align: center;
     animation: fadeIn 1s ease-in-out;
 }
 
+.contact div{
+    background: rgba(0,0,0,0.2);
+    padding: 60px 40px;
+    border-radius: 20px;
+}
+
+.contact h2{
+    font-size: 2.8rem;
+    color: var(--grey-200);
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
 .contact a {
-    color: var(--white);
+    color: var(--grey-500);
     font-weight: bold;
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -292,11 +335,11 @@ a {
 }
 
 .contact p {
-    font-size: 1rem;
-    color: var(--grey-700);
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
+    font-size: 14px;
+    color: var(--grey-200);
+    margin-bottom: 2px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left
 }
 
 /* Partners Section */
@@ -322,7 +365,7 @@ a {
 }
 
 .partner-logos img {
-    width: 100px;
+    width: 150px;
     height: auto;
     transition: transform 0.4s ease, filter 0.3s ease;
 }

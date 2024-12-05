@@ -68,19 +68,19 @@
 	Start Feautes CSS
 ===============================*/
 .Feautes{
-	padding: 1% 0;
+	padding: 20px 50px;
   text-align: center;
 }
-.Feautes p{
+.section-title p{
     color: var(--black);
-
+    text-align: justify;
 }
-
+  
 .section-title h2{
     padding-bottom: 0;
     margin-bottom: 0;
-    font-size: 2rem;
-    color: var(--grey-800);
+    font-size: 1.9rem;
+    color: #000;
     text-transform: uppercase;
 }
 .section-title img{
@@ -97,60 +97,95 @@
 .Feautes .single-features{
 	text-align:center;
 	position:relative;
-	padding:10px 20px;
+  max-height: 40vh;
+  margin: 70px;
+  padding: 50px;
+  background-color: var(--white);
+  background-image: linear-gradient(120deg, hsla(26, 80%, 50%, .5), 10%, hsl(270, 50%, 11%) 60%);
+  border-radius: 50%;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1), inset 0px 1px 5px rgba(255, 255, 255, 0.8);
+  transition: transform 0.3s, box-shadow 0.3s;
+  transform: translateY(-10px) rotateY(10deg) rotateX(5deg);
+  
+}
+.Feautes .single-features:hover{
+  transform: translateY(-10px) scale(1.02);
+  transform: perspective(1000px) rotateY(15deg) translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0 0 15px rgba(0, 0, 0, 0.1);
+
+ 
 }
 .Feautes .single-features::before {
 	position: absolute;
 	content: "";
-	right: -72px;
-	top: 60px;
+	right: -130px;
+	top: 50%;
 	width: 118px;
 	border-bottom: 2px dotted var(--gold-700);
+  
 }
-.Feautes .single-features img:hover{
-  -webkit-transform:scale(1.2);
-	-moz-transform:scale(1.2);
-	transform:scale(1.1);
-  transition: 0.3s;
+.Feautes .single-features img{
+  /* background-color: #85888b; */
+  border-radius: 15%;
 }
 .Feautes .single-features.last::before{
 	display:none;
 }
 .Feautes .single-features .signle-icon{
 	position:relative;
+  
 }
 .Feautes .single-features .signle-icon img{
   padding: 10px;
 	font-size:50px;
+  background-color: var(--white);
 	position:absolute;
 	left:50%;
 	margin-left:-50px;
 	top:0;
 	height:100px;
-	width:100px;
-	line-height:100px;
-	text-align:center;
-	border-radius:25%;
-	-webkit-transition:all 0.4s ease;
-	-moz-transition:all 0.4s ease;
-	transition:all 0.4s ease;
+	width:100px; 
 }
-.Feautes .single-features:hover .signle-icon img{
-	background:var(--gold-100);
-	color:#fff;
-	border-color:transparent;
-  box-shadow: var(--shadow-4);
-}
+
 .Feautes .single-features h3{
 	padding-top: 128px;
-	color:var(--grey-900);
-	font-weight:600;
+	color: var(--white);
+	font-weight: lighter;
 	font-size:21px;
   text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+  
 }
-.Feautes .single-features p {
+
+.row .single-features p {
 	margin-top: 20px;
+  padding-top: 50px;
+  font-size: var(--font-size-sm);
+  color: #000;
+  text-align: center;
 }
+
+#ps {
+  line-height: 1.5;
+  margin-top: 10px;
+  opacity: 1.9;
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--grey-900);
+  font-size: 1.6rem;
+  font-style:normal;
+  font-weight:bold;
+}
+.section-title h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #06b600;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+
 /*=============================
 	End Feautes CSS
 ===============================*/
@@ -162,6 +197,7 @@
 .professional_section {
   background-color: var(--grey-300);
   border-radius: var(--borderRadius);
+  height: 70vh;
 }
 .professional_section .container .row2{
   display: grid;
@@ -180,20 +216,27 @@
 
 .professional_section .detail-box h2 {
   text-transform: uppercase;
+  font-size: 2.9rem;
   font-weight: bold;
   color: var(--grey-900);
 }
-
-.professional_section .detail-box p {
-  margin-top: 20px;
+.professional_section .detail-box p{
   color: var(--grey-900);
+  text-align: justify;
+  font-size: 1.6rem;
+  font-style: oblique;
+  font-weight:bold;
+  margin-top: 10px;
+	padding-top: 25px;
+  padding-right: 30px;
+
 }
 
 .professional_section .detail-box a {
   margin-top: 5px;
   display: inline-block;
   font-family:cursive;
-  font-size: 1rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
   padding: 10px 45px;
   border-radius: 2px;
@@ -239,6 +282,12 @@
 ===========================*/
 .services{
   padding: 2%;
+  color: var(--grey-900);
+}
+.section-title h2 {
+  text-transform: uppercase;
+  font-size: 1.9rem;
+
   color: var(--grey-900);
 }
 .services .single-service{
@@ -292,6 +341,34 @@
 .services .row-col .single-service p{
 text-align: center;
 color: var(--grey-900);
+
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .Feautes .single-features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Feautes .single-features {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Feautes .single-features {
+    width: 100%;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
 }
 
 

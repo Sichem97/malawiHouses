@@ -106,7 +106,7 @@ export default function Rental() {
   return (
     <>
       <RentalSearch onFilterChange={handleFilterChange} />
-
+ 
       <div className="product-grid_rental">
         {filteredData.length > 0 ? (
           filteredData.map((value, index) => (
@@ -190,15 +190,18 @@ export default function Rental() {
                     required
                   />    
                   <div className="confirm">
-                  <button type="submit" id='apply'>Apply Now</button>
-                  <button type="button" id='cancel' onClick={handleCancel} className="btn-cancel">Cancel</button>
+                  <button type="submit" className='apply'>Apply</button>
+                  <button type="button" className='cancel' onClick={handleCancel}>Cancel</button>
                 </div> 
                 </section>
 
                 <div className="detail">
-                  <span>{selectedProduct.description}</span>
-                  <span>District : {selectedProduct.district}</span>
-                  <span>Amount : mwk {selectedProduct.cost}  </span>   
+                  <p>Description : {selectedProduct.description}</p>
+
+                  <p>District : {selectedProduct.district}</p>
+                  
+                  <p>Amount : <span>Mwk</span> {selectedProduct.cost}  </p>   
+                  <p>Other Details : {selectedProduct.detail}</p>
               </div> 
               </form>
             

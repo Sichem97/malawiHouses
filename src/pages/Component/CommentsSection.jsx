@@ -53,7 +53,7 @@ function CommentsSection({ post, handleAddComment, handleAddReply }) {
           {comments.map(comment => (
             <div className="single-comments" key={comment.id}>
               <div className="mainBlog">
-                <div className="body">
+                <div className="body_blog">
                   <h4>{comment.author}</h4>
                   <div className="comment-meta">
                     <span className="meta"><i className="fa fa-calendar"></i> {comment.date}</span>
@@ -64,7 +64,7 @@ function CommentsSection({ post, handleAddComment, handleAddReply }) {
 
                   {comment.replies.map(reply => (
                     <div className="single-comments left" key={reply.id}>
-                      <div className="body">
+                      <div className="body_blog">
                         <h4>{reply.author}</h4>
                         <div className="comment-meta">
                           <span className="meta"><i className="fa fa-calendar"></i> {reply.date}</span>
@@ -96,7 +96,6 @@ function CommentsSection({ post, handleAddComment, handleAddReply }) {
       <div className="comments_form">
         <h2>Leave Comment</h2>
         <form className="form" onSubmit={handleSubmitComment}>
-          <div className="form_comment">
             <div className="form-group">
               <i className="fa fa-user"></i>
               <input type="text" name="firstName" placeholder="Your Name" required />
@@ -105,9 +104,8 @@ function CommentsSection({ post, handleAddComment, handleAddReply }) {
               <i className="fa fa-pencil"></i>
               <textarea name="message" rows="7" placeholder="Type Your Message Here" required></textarea>
             </div>
-          </div>
           <div className="form_group button">
-            <button type="submit" className="btn primary"><i className="fa fa-send"></i> Submit Comment</button>
+            <button type="submit" className="btn primary"><i className="fa fa-send"></i> Submit</button>
           </div>
         </form>
       </div>
